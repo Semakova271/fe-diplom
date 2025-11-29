@@ -1,183 +1,164 @@
 import icon_arrow from '../img/ic_cached.png';
 import vector from '../img/Vector.svg';
+import calendar from '../img/Group.svg';
 import banner from '../img/banner.png';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux';
-import { 
-  citiesFromListRequest, 
-  citiesToListRequest, 
-  trainsListRequest,
-  setDateStart,
-  setDateEnd 
-} from '../redux/slice/trainSlice';
+import { citiesFromListRequest, citiesToListRequest, trainsListRequest } from '../redux/slice/trainSlice';
 
 export const FormOrder = () => {
-  const { 
-    citiesFromList, 
-    cityFromId, 
-    citiesToList, 
-    cityToId,
-    form 
-  } = useSelector(state => state.train);
+  let {citiesFromList, cityFromId, loadingCitiesFrom, errorCitiesFrom, citiesToList, cityToId} = useSelector(state => state.train);
 
+  const [showCalendarHere, setShowCalendarHere] = useState(false);
+  const [showCalendarBack, setShowCalendarBack] = useState(false);
+  const [dateHere, setDateHere] = useState('');
+  const [dateBack, setDateBack] = useState('');
+  const [valueStart, setValue] = useState(new Date());
+  const [valueEnd, setValueBack] = useState(new Date());
+  const [cityFrom, setCityFrom] = useState({'city': '', 'id': ''});
+  const [cityTo, setCityTo] = useState({'city': '', 'id': ''});
+ 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [date_start, setDateStart] = useState(null);
+  const [date_end, setDateEnd] = useState(null);
+  let valid = false;
 
-  // Проверяем валидность формы
-  const isValid = cityFromId !== '' && cityToId !== '' && form.date_start !== '';
+  if (cityFromId !== '' && cityToId !== '' && date_start !== null && date_end !== null) {
+    valid = true
+  }
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (isValid) {
-      const searchData = {
-        ...form,
-        from_city_id: cityFromId,
-        to_city_id: cityToId,
-      };
-      dispatch(trainsListRequest(searchData));
-      navigate('trains/');
+  const handleClick = () => {
+    const form = {
+      'from_city_id': cityFromId,
+      'to_city_id': cityToId,
+      'date_start': date_start,
+      'date_end': date_end,
+      'sort': 'date',
+      'limit': 5,
+      'offset': 0
     }
-  };
+    dispatch(trainsListRequest(form))
+    navigate('trains/')
+  }
 
-  const handleCityFromChange = (e) => {
-    const value = e.target.value;
-    dispatch(citiesFromListRequest(value.toLowerCase()));
-  };
+  useEffect(() => {
+    setCityFrom((prevCity) => ({...prevCity, id: cityFromId}));
+  }, [cityFromId])
 
-  const handleCityToChange = (e) => {
-    const value = e.target.value;
-    dispatch(citiesToListRequest(value.toLowerCase()));
-  };
+  useEffect(() => {
+    setCityTo((prevCity) => ({...prevCity, id: cityToId}))
+  }, [cityToId])
 
-  const selectCityFrom = (city) => {
-    dispatch(citiesFromListRequest(city.name));
-    // Очищаем список городов после выбора
-    setTimeout(() => {
-      dispatch({ type: 'train/citiesFromListSuccess', payload: [] });
-    }, 100);
-  };
-
-  const selectCityTo = (city) => {
-    dispatch(citiesToListRequest(city.name));
-    // Очищаем список городов после выбора
-    setTimeout(() => {
-      dispatch({ type: 'train/citiesToListSuccess', payload: [] });
-    }, 100);
-  };
-
-  const swapCities = () => {
-    if (cityFromId && cityToId) {
-      const tempCity = { name: citiesFromList.find(city => city._id === cityFromId)?.name, id: cityFromId };
-      const tempCityTo = { name: citiesToList.find(city => city._id === cityToId)?.name, id: cityToId };
-      
-      dispatch(citiesFromListRequest(tempCityTo.name));
-      dispatch(citiesToListRequest(tempCity.name));
+  const onChange = (value) => {
+    const time = value.toLocaleDateString('en-ca');
+    const start = valueStart.toLocaleDateString('en-ca')
+    if ((value > valueStart) || (new Date(time).getTime() === new Date(start).getTime())) {
+      setDateStart(time);
+      setDateHere(dateToString(value));
+      setShowCalendarHere(false);
     }
-  };
+  }
 
-  return (
-    <div className="header-main">
-      <div className="banner-main"></div>
-      <div className="container-fluid">
-        <div className="header">
-          <div className="container-logo">Лого</div>
-          <nav className="nav-items">
-            <a href="/fe-diplom/" className="nav-item">Главная</a>
-            <a href="/fe-diplom/trains/" className="nav-item">Выбор поезда</a>
-          </nav>
-        </div>
-      </div>
-      
-      <div className="header-title">
-        Вся жизнь - <span className="strong">путешествие!</span>
-      </div>
+  const onChangeBack = (valueBack) => {
+    if (valueBack > new Date(date_start)) {
+      setDateEnd(valueBack.toLocaleDateString('en-ca'));
+      setDateBack(dateToString(valueBack));
+      setShowCalendarBack(false);
+    }
+  }
+  
+  const dateToString = (date) =>  {
+    const result = date.toLocaleString('ru-Ru', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    });
+    return result.replace(/[,%]/g, '');
+  }
 
-      <div className="form-main">
-        <form onSubmit={handleSearch}>
-          <p className="form-title">Направление</p>
-          <div className="form-direction">
-            <div style={{ position: 'relative' }}>
-              <input
-                type="text"
-                className="direction-here"
-                placeholder="Откуда"
-                value={citiesFromList.find(city => city._id === cityFromId)?.name || ''}
-                onChange={handleCityFromChange}
-              />
-              <img 
-                className={cityFromId ? 'vector invisible' : 'vector'} 
-                src={vector} 
-                alt="vector"
-              />
-              {citiesFromList.length > 0 && (
-                <div className="direction-here-cities">
-                  {citiesFromList.map(city => (
-                    <div key={city._id} onClick={() => selectCityFrom(city)}>
-                      {city.name}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+  const handleChangeCity = (e) => {
+    if (e.target.name === 'cityFrom') {
+      dispatch(citiesFromListRequest(e.target.value.toLowerCase()))
+      setCityFrom((prevCity) => ({...prevCity, city: e.target.value}))
+    } else if (e.target.name = 'cityTo') {
+      setCityTo((prevCity) => ({...prevCity, city: e.target.value}));
+      dispatch(citiesToListRequest(e.target.value.toLowerCase()));
+    }
+  }
 
-            <button 
-              type="button" 
-              className="btn button_reverse"
-              onClick={swapCities}
-            >
-              <img src={icon_arrow} alt="swap cities" />
-            </button>
+  const changeCity = () => {
+    let change;
+    if (cityFrom !== '' && cityTo !== '') {
+      change = cityFrom;
+      setCityFrom(cityTo)
+      setCityTo(change)
+    }
+  }
 
-            <div style={{ position: 'relative' }}>
-              <input
-                type="text"
-                className="direction-to"
-                placeholder="Куда"
-                value={citiesToList.find(city => city._id === cityToId)?.name || ''}
-                onChange={handleCityToChange}
-              />
-              <img 
-                className={cityToId ? 'vector vector-to invisible' : 'vector vector-to'} 
-                src={vector} 
-                alt="vector"
-              />
-              {citiesToList.length > 0 && (
-                <div className="directiron-to-cities">
-                  {citiesToList.map(city => (
-                    <div key={city._id} onClick={() => selectCityTo(city)}>
-                      {city.name}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+  return(
+    <>
+      <div className='header'>
+        <h2 className='header-title'>Вся жизнь - <p className='strong'>путешествие!</p></h2>
+        <img src={banner} className='banner'/>
+        <div className='form-order'>
+          <p className='form-title'>Направление</p>
+          <div className='form-direction'>
+            <input className='direction-here' placeholder='Откуда' name='cityFrom' defaultValue={cityFrom.city} onChange={handleChangeCity} required/>
+            <img className={cityFrom.city === '' ? 'vector' : 'vector invisible'} src={vector} alt='vector'/>
+            { citiesFromList.length > 0 &&
+              <div className='direction-here-cities'>
+                {
+                  citiesFromList.map(item => 
+                    (
+                      <div key={item._id}>{item.name}</div>
+                    )  
+                  )
+                }
+              </div>
+            }
+            <button className='btn button_reverse'><img src={icon_arrow} onClick={changeCity}/></button>
+            <input className='direction-to' placeholder='Куда' name='cityTo' defaultValue={cityTo.city} onChange={handleChangeCity} required/>
+            <img className={cityTo.city === '' ? 'vector vector-to' : 'vector vector-to invisible'} src={vector} alt='vector' />
+            { citiesToList.length > 0 && 
+              <div className='directiron-to-cities'>
+                {
+                   citiesToList.map(item => 
+                    (
+                      <div key={item._id}>{item.name}</div>
+                    )  
+                  )
+                }
+              </div>
+            }
           </div>
-
-          <p className="form-title">Дата</p>
-          <div style={{ display: 'flex', marginBottom: '92px' }}>
-            <DatePicker 
-              type="start" 
-              value={form.date_start} 
-            />
-            <DatePicker 
-              type="end" 
-              value={form.date_end} 
-            />
+            <p className='form-title'>Дата</p>
+            <div className='form-data'>
+              { showCalendarHere &&
+                <CalendarComponent>
+                  <Calendar onChange={onChange} value={valueStart}/>
+                </CalendarComponent>
+              }
+              <input className='direction-here-data' placeholder='ДД/ММ/ГГ' defaultValue={dateHere}/>
+              <button className='btn button-data' onClick={() => setShowCalendarHere(!showCalendarHere)}><img src={calendar}/></button>
+              { showCalendarBack &&
+                <CalendarComponentBack>
+                  <Calendar onChange={onChangeBack} value={valueEnd}/>
+                </CalendarComponentBack>
+              }
+              <input className='direction-back-data' placeholder='ДД/ММ/ГГ' defaultValue={dateBack} />
+              <button className='btn button-data-back' onClick={() => setShowCalendarBack(!showCalendarBack)}><img src={calendar}/></button>
+            </div>
+            <button className='btn button-find' onClick={handleClick} disabled={valid ? false : true}>Найти билеты</button>
           </div>
-
-          <button 
-            type="submit" 
-            className="btn button-find" 
-            disabled={!isValid}
-          >
-            Найти билеты
-          </button>
-        </form>
       </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
 const CalendarComponent = styled.div`
   position: absolute;
