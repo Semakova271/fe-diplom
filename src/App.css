@@ -8,11 +8,22 @@ body {
   color: #FFF;
   font-style: normal;
   line-height: normal;
+  pointer-events: auto !important;
+  overflow-x: hidden;
   
 }
 
 a {
   color: #E5E5E5;
+}
+
+a, button, input, select, .nav-item, .btn, [onClick] {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+body::before, body::after {
+  display: none !important;
 }
 
 a,
