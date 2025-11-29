@@ -11,7 +11,6 @@ import {
   setDateStart,
   setDateEnd 
 } from '../redux/slice/trainSlice';
-import DatePicker from './DatePicker';
 
 export const FormOrder = () => {
   const { 
