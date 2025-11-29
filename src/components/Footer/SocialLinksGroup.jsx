@@ -1,31 +1,33 @@
 import React from "react";
 
-const SocialLinksGroup = () => {
-    return (<React.Fragment>
-                    <div className="social  text-light">
-              <h5 className="footer-social__title text-left">
-                Подписывайтесь на нас
-              </h5>
-              <div className="footer-social__icons-group">
-                <a className="icon_link icon-bottom" href="#youtube">
-                    <i className="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-                </a>
-                <a className="icon_link " href="#linkedin">
-                <i className="fa fa-linkedin fa-2x " aria-hidden="true"></i>
-                </a>
-                <a className="icon_link" href="#google">
-                <i className="fa fa-google-plus fa-2x" aria-hidden="true"></i>
-                </a>
-                <a className="icon_link" href="#facebook">
-                <i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
-                </a>
-                <a className="icon_link" href="#twitter">
-                <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
-                </a>
+const socialLinks = [
+  { href: "#youtube", icon: "fa-youtube-play", label: "YouTube" },
+  { href: "#linkedin", icon: "fa-linkedin", label: "LinkedIn" },
+  { href: "#google", icon: "fa-google-plus", label: "Google Plus" },
+  { href: "#facebook", icon: "fa-facebook", label: "Facebook" },
+  { href: "#twitter", icon: "fa-twitter", label: "Twitter" },
+];
 
-              </div>
-            </div>
-    </React.Fragment>)
-}
+const SocialLinksGroup = () => {
+  return (
+    <div className="social text-light">
+      <h5 className="footer-social__title">Подписывайтесь на нас</h5>
+      <div className="footer-social__icons-group">
+        {socialLinks.map(({ href, icon, label }) => (
+          <a
+            key={href}
+            className="icon_link"
+            href={href}
+            aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className={`fa ${icon} fa-2x`} aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default SocialLinksGroup;
