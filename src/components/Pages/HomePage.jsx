@@ -1,5 +1,5 @@
 import React from "react";
-import MainForm from "../Forms/MainForm";
+import MainForm from "../Forms/Forms";
 import About from "../Main/About";
 import HowItWorks from "../Main/HowItWorks";
 import FeedBack from "../Main/FeedBack";
