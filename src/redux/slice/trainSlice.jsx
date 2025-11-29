@@ -80,6 +80,13 @@ export const trainSlice = createSlice({
                 state.citiesToList = [];
             }
         },
+        
+        setDateStart: (state, action) => {
+            state.form.date_start = action.payload;
+        },
+        setDateEnd: (state, action) => {
+            state.form.date_end = action.payload;
+        },
         trainsListRequest: (state, action) => {
             state.form = action.payload;
             if (state.form.sort === 'price') {
@@ -116,10 +123,10 @@ export const trainSlice = createSlice({
         trainSeatsRequest: (state, action) => {
             state.trainId = action.payload;
             state.loadingTrainSeats = true;
-            state.errorTrainSeats = false; // Добавлена точка с запятой
+            state.errorTrainSeats = false;
         }, 
         trainSeatsFailure: (state, action) => {
-            state.loadingTrainSeats = false; // Исправлено: была запятая вместо точки с запятой
+            state.loadingTrainSeats = false;
             state.errorTrainSeats = action.payload;
         },
         trainSeatsSuccess: (state, action) => {
@@ -154,6 +161,8 @@ export const {
     citiesToListFailure,
     citiesToListRequest,
     citiesToListSuccess,
+    setDateStart,
+    setDateEnd,
     trainsListRequest,
     trainsListFailure,
     trainsListSuccess,

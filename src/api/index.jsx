@@ -1,5 +1,3 @@
-
-
 export function getCities (item) {
     return fetch(`https://students.netoservices.ru/fe-diplom/routes/cities?name=${item}`)
         .then(response => response.json())
