@@ -2,42 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=cyrillic-ext'); 
 @import 'react-calendar/dist/Calendar.css';
 
-* {
-  box-sizing: border-box;
-  pointer-events: auto !important;
-}
  
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  pointer-events: auto !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   color: #FFF;
   font-style: normal;
   line-height: normal;
-  background-color: #000;
+  
 }
 
 a {
   color: #E5E5E5;
-   text-decoration: none;
-}
-
-a, button, input, select, .nav-item, .btn, [onClick] {
-  pointer-events: auto !important;
-  cursor: pointer !important;
-}
-
-body::before, body::after {
-  display: none !important;
 }
 
 a,
@@ -51,12 +26,12 @@ a:active {
 
 
 .container-fluid {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 15px 20px;
-  position: relative;
+  top: 0;
+  padding: 15px 0 0 0;
+  margin: 0;
+  width: 1920px;
   z-index: 10;
+  position: absolute;
 }
 
 .container-logo {
@@ -88,13 +63,9 @@ a:active {
 
 .header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 8px solid #FFA800;
-  width: 100%;
-  padding: 10px 0;
+  border-bottom: 8px solid  #FFA800;
+  width: 1920px;
 }
-
 .header-main, .header-result-order {
   border-bottom: none;
 }
@@ -104,21 +75,19 @@ a:active {
 }
 
 .banner {
-  width: 100%;
-  height: auto;
-  min-height: 400px;
+  width: 1920px;
   background-color: rgba(0, 0, 0, 0.6);
-  position: relative;
+  position: absolute;
   background-size: cover;
-  background-position: center;
   z-index: -1;
+  height: 990px;
 }
 
 .banner-main {
-  width: 100%;
-  height: auto;
-  min-height: 500px;
-  position: relative;
+  width: 1920px;
+  height: 729px;
+  position: absolute;
+  margin: 0;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
@@ -133,20 +102,23 @@ a:active {
 
 
 .header-title {
-  text-align: center;
-  font-size: clamp(32px, 8vw, 72px);
-  font-weight: 100;
-  margin: 40px auto;
-  padding: 0 20px;
-  max-width: 506px; 
+  margin-left: 348px;
+  margin-top: 573px;
+  margin-right: 104px;
+  width: 506px;
+  flex-direction: column;
+  display: inline-flex;
+  font-size: 72px;
+  font-weight: 100; 
 }
 
 .banner-title-result-order {
   color: #FFF;
-  font-size: clamp(32px, 8vw, 72px);
+  font-size: 72px;
   font-weight: 700;
-  text-align: center;
-  margin: 40px 20px;
+  margin-left: 258px;
+  margin-top: 500px;
+  margin-bottom: 45px;
 }
 
 .header-title .strong {
@@ -154,24 +126,21 @@ a:active {
 }
 
 .form-order, .form-main {
-  width: 100%;
-  max-width: 729px;
-  margin: 40px auto;
-  padding: 30px 20px;
+  width: 729px;
+  height: 574px;
+  margin-top: 411px;
   background: rgba(41, 41, 41, 0.80);
-  border-radius: 8px;
+  padding: 79px 24px 60px 21px;
 }
 
 .form-main {
-  max-width: 1490px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  height: auto;
+  margin-top: 269px;
+  margin-left: 217px;
+  padding-top: 28px;
+  width: 1490px;
+  height: 390px;
+  justify-content: space-between;
 }
 
 .result-order-form {
@@ -373,24 +342,19 @@ a:active {
 }
 
 .form-title {
-  font-size: clamp(20px, 4vw, 30px);
+  font-size: 30px;
   font-weight: 300;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .form-direction {
-  margin-bottom: 40px;
+  margin-bottom: 61px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .direction-here, .direction-to, .direction-here-data, .direction-back-data {
-  width: 100%;
+  width: 323px;
   height: 60px;
-  padding: 15px;
+  padding: 19px 73px 11px 21px;
   border: none;
   border-radius: 3px;
   background-color: #FFF;
@@ -446,19 +410,16 @@ a:active {
   border: none;
   background-color: transparent;
   outline: none;
-  width: 40px;
-  height: 40px;
-  margin: 10px auto;
+  width: 24px;
+  margin: 0;
+  margin-bottom: 5px;
+  height: 24px;
   padding: 0;
-  cursor: pointer;
 }
 
 .form-data {
-  margin-bottom: 40px;
+  margin-bottom: 92px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .direction-here-data {
@@ -467,15 +428,12 @@ a:active {
 
 .button-data, .button-data-back {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 13px;
+  left: 288px;
   width: 30px;
-  height: 30px;
+  height: 33.53px;
   padding: 0;
   z-index: 1;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 .button-data-back {
@@ -484,19 +442,15 @@ a:active {
 
 .button-find {
   border-radius: 5px;
+  margin-left: 363px;
+  outline: none;
   background-color: #FFA800;
-  width: 100%;
-  max-width: 323px;
+  width: 323px;
   height: 60px;
   color: #292929;
-  font-size: clamp(18px, 4vw, 24px);
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  border: none;
-  margin: 20px auto;
-  display: block;
-  cursor: pointer;
-  transition: all 0.3s;
 }
 
 .button-find:hover, .btn-main:hover {
@@ -504,39 +458,40 @@ a:active {
 }
 
 .button-find:active, .btn-main:active {
+  border-radius: 5px;
   border: 1px solid #FFA800;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #FFA800;
   background: #F7F5F9;
-}
-
-.about, .how-works, .footer {
-  width: 100%;
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
+  text-transform: uppercase;
 }
 
 .about {
   color: #292929;
-  padding: 60px 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  line-height: normal;
+  width: 1920px;
 }
 
 .title-about {
-  font-size: clamp(24px, 5vw, 36px);
+  font-size: 36px;
+  margin-top: 144px;
+  margin-left: 258px;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .paragraphs {
-  width: 100%;
-  padding: 20px;
-  font-size: clamp(16px, 3vw, 20px);
+  margin-right: 314px;
+  height: 258px;
+  margin-left: 258px;
+  width: 1320px;
+  padding-left: 19px;
+  font-size: 24px;
   font-weight: 400;
-  border-left: 9px solid #FFA800;
-  margin: 0 auto;
+  border-left: 9px solid  #FFA800;
 }
 
 .paragraph {
@@ -548,33 +503,35 @@ a:active {
 }
 
 .how-works {
-  background: linear-gradient(rgba(255, 168, 0, 0.8), rgba(0, 0, 0, 0.25));
-  padding: 60px 20px;
-  margin-top: 60px;
+  background: linear-gradient(rgba(255, 168, 0, 0.8), rgba(0, 0, 0, 0.25)), url('./img/image.png') center/cover;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 50px;
   position: relative;
+  width: 1920px;
+  margin-top: 160px;
 }
 
 .title-how-works {
-  font-size: clamp(24px, 5vw, 36px);
+  font-size: 36px;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 40px;
-  text-align: center;
+  margin-left: 258px;
+  margin-top: 36px;
+  margin-bottom: 107px;
 }
 
 .button-how-works {
   text-align: center;
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: 24px;
   color: #FFF;
   font-weight: 700;
   border-radius: 5px;
   border: 1px solid #FFF;
-  padding: 12px 24px;
-  margin: 20px auto;
-  display: block;
-  background: none;
-  cursor: pointer;
-  transition: all 0.3s;
+  padding: 16px 77px 15px 76px;
+  position: absolute;
+  top: 31px;
+  right: 269px;
 }
 
 .button-how-works:hover {
@@ -592,28 +549,31 @@ a:active {
 .how-works-list {
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  margin-left: 540px;
   padding: 0;
-  margin: 0;
+  margin-bottom: 72px;
 }
 
 .how-works-item {
+  margin-right: 201px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 226px;
   color: #E5E5E5;
   text-align: center;
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
-  max-width: 226px;
+  line-height: normal;
+  flex-direction: column;
+  text-align: center;
 }
 
 .how-works-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+  width: 162px;
+  height: 162px;
+  margin-bottom: 34px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .reviews {
@@ -3348,205 +3308,4 @@ hr.dropdown-divender {
   border: 1px solid #FFA800;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #FFA800;
-}
-
-@media (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 40px;
-  }
-  
-  .container-logo {
-    color: #E5E5E5;
-  font-size: clamp(24px, 5vw, 36px);
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 15px;
-  }
-  
-  .nav-items {
-      display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  font-size: clamp(16px, 4vw, 24px);
-  font-weight: 300;
-  }
-  
-  .nav-item {
-  margin: 0;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.nav-item:hover {
-  color: #FFA800;
-}
-
-  .form-direction {
-    flex-direction: row;
-  }
-  
-  .direction-here, .direction-to {
-    width: calc(50% - 10px);
-  }
-  
-  .form-data {
-    flex-direction: row;
-  }
-  
-  .direction-here-data, .direction-back-data {
-    width: calc(50% - 10px);
-  }
-  
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .form-subscribe {
-    flex-direction: row;
-  }
-  
-  .subcribe-input {
-    width: 300px;
-  }
-  
-  .button-subcribe {
-    width: auto;
-    padding: 0 30px;
-  }
-}
-
-/* Десктопы */
-@media (min-width: 1024px) {
-  .container-fluid {
-    padding: 15px 40px;
-  }
-  
-  .nav-items {
-    gap: 50px;
-  }
-  
-  .nav-item {
-    margin-right: 30px;
-  }
-  
-  .header-title {
-    margin-left: 10%;
-    text-align: left;
-  }
-  
-  .banner-title-result-order {
-    text-align: left;
-    margin-left: 10%;
-  }
-  
-  .form-main {
-    flex-direction: row;
-    padding: 40px;
-  }
-  
-  .how-works-list {
-    flex-wrap: nowrap;
-    gap: 50px;
-  }
-  
-  .how-works-icon {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* Большие экраны */
-@media (min-width: 1440px) {
-  .nav-item {
-    margin-right: 60px;
-  }
-  
-  .header-title {
-    margin-left: 348px;
-  }
-  
-  .banner-title-result-order {
-    margin-left: 258px;
-  }
-  
-  .form-order, .form-main {
-    margin-top: 200px;
-  }
-}
-
-/* Особо маленькие экраны */
-@media (max-width: 480px) {
-  .container-fluid {
-    padding: 10px 15px;
-  }
-  
-  .nav-items {
-    gap: 10px;
-  }
-  
-  .nav-item {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-  
-  .header-title {
-    font-size: 24px;
-    margin: 20px auto;
-  }
-  
-  .form-order, .form-main {
-    padding: 20px 15px;
-    margin: 20px auto;
-  }
-  
-  .button-find {
-    height: 50px;
-    font-size: 16px;
-  }
-}
-
-/* ===== ИСПРАВЛЕНИЯ ДЛЯ REACT КОМПОНЕНТОВ ===== */
-.react-calendar {
-  width: 100%;
-  max-width: 325px;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Убедимся, что все изображения адаптивны */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Улучшение доступности для тач-устройств */
-@media (pointer: coarse) {
-  .nav-item, .btn, button {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
-/* Ховер-эффекты только для устройств с мышью */
-@media (hover: hover) {
-  .button-how-works:hover {
-    background: #FFCA62;
-    color: #2D2B2F;
-  }
-  
-  .button-subcribe:hover {
-    background: #FFCA62;
-    color: #2D2B2F;
-  }
-  
-  a:hover {
-    color: #FFA800;
-  }
 }
