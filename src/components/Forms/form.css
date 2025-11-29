@@ -1,0 +1,81 @@
+.form-calendar {
+  width: 325px;
+  height: 60px;
+  border-radius: 4px;
+  padding: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.sidebar_form.form-calendar {
+  width: 295px;
+  height: 43px;
+}
+input.form-calendar:focus {
+  border: 1px solid #ffa800;
+}
+.react-datepicker {
+  margin-left: -15px;
+}
+.react-datepicker-popper {
+  z-index: 99;
+}
+button.react-datepicker__navigation {
+  margin-top: 15px;
+}
+.react-datepicker__day-names {
+  display: none;
+}
+.react-datepicker__month-container {
+  width: 352px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.react-datepicker__header {
+  padding-top: 20px;
+}
+.react-datepicker__current-month {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 21px;
+}
+.react-datepicker__day {
+  color: #000;
+  display: inline-block;
+  width: 2.7rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  text-align: center;
+  font-size: 18px;
+  margin: 0.16rem;
+}
+
+.sunday_date {
+  font-weight: 700;
+}
+.outside_day {
+  color: #e5e5e5;
+}
+
+.before_day {
+  color: #928f94;
+}
+.react-datepicker__day--selected {
+  border: 1px solid;
+  border-color: #ffa800;
+  background: rgba(255, 168, 0, 0.31);
+}
+.react-datepicker__day--selected:hover {
+  border: 1px solid;
+  border-color: #ffa800;
+  background: #ffa800;
+}

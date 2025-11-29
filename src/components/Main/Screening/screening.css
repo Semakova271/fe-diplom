@@ -1,0 +1,275 @@
+section.screening {
+  margin-left: 86px;
+  width: 958px;
+}
+.screening-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.screening-block {
+  width: 959px;
+  margin-top: 95px;
+  margin-right: 257px;
+}
+.screening-block_card_title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #292929;
+}
+.screening-train_card.card {
+  border: none;
+  display: flex;
+  flex-direction: row;
+}
+.card.screening-block_card {
+  width: 959px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
+}
+.screening-block_card-top {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.card-top.screening-train {
+  width: 197px;
+  display: flex;
+  flex-direction: column;
+
+  background: #e4e0e9;
+}
+.card-body.screeneng-train {
+  width: 479px;
+  padding-left: 39px;
+  padding-right: 36px;
+}
+.screening-train-svgIcon-wrap {
+  margin-top: 58px;
+  margin-left: 43px;
+}
+
+.screening-train.trains-number {
+  margin-left: 30px;
+  margin-top: 17px;
+}
+
+.screening-block_card-body {
+  border-top: 1px solid #928f94;
+}
+.card-body.screening-train {
+  padding: 0;
+  padding-left: 39px;
+  padding-top: 54px;
+  padding-right: 36px;
+  width: 479px;
+}
+.screening-train-group.d-flex.flex-row {
+  justify-content: space-between;
+}
+.screening-train-reverse-group.d-flex.flex-row {
+  margin-top: 63px;
+}
+
+.trails-duration-block > .screening-train-svgIcon-wrap {
+  margin-top: 7px;
+  margin-left: 3px;
+}
+img.screening-train-reverse__icon {
+  transform: rotate(180deg);
+}
+.card-bottom.screening-train_bottom {
+  width: 282px;
+  border-left: 1px dashed #e5e5e5;
+}
+
+.screening-available-vagons {
+  padding-left: 27px;
+  padding-right: 22px;
+  margin-top: 41px;
+}
+
+.screening-train_icons-block {
+  color: #c4c4c4;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 28px;
+}
+
+.screening-train_control {
+  margin-top: 17px;
+  display: flex;
+  justify-content: flex-end;
+}
+/*Пассажиры*/
+
+.screening-block_passengers,
+.screening-block_payment {
+  margin-top: 45px;
+}
+.screening-block.screening-block_passengers {
+  display: flex;
+  width: 959px;
+}
+.screening-block_card-body {
+  display: flex;
+}
+
+.card-desk {
+  width: 678px;
+  padding-top: 30px;
+}
+
+.screening-block_card-body-item_card.card {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  margin-top: 30px;
+}
+.screening-block_card-body-item_card:nth-last-child(1) {
+  margin-bottom: 60px;
+}
+.screening-block_card-body-item_card.card:not(:last-child) {
+  border-bottom: 1px dashed #e5e5e5;
+}
+.card-top.passengers {
+  width: 156px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span.passengers_card-top-text {
+  margin-top: 17px;
+  margin-bottom: 46px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #292929;
+}
+
+.passengers-svgIcon-wrap {
+  width: 68px;
+}
+.card-body.passengers {
+  padding: 0;
+}
+
+.passengers_body_group-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 46px;
+}
+.passengers_body-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+  color: #292929;
+}
+
+.passengers_body-text:not(:first-child) {
+  color: #928f94;
+  margin-bottom: 0;
+}
+
+.screening-passengers_control.passengers_card-bottom {
+  width: 281px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-left: 1px dashed #e5e5e5;
+}
+
+.screening-passengers_control_price-block {
+  display: flex;
+  width: 100%;
+  margin-bottom: 28px;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: space-evenly;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #292929;
+}
+
+.price-block_sum {
+  font-weight: 700;
+}
+
+svg.control_price-block_currency {
+  margin-bottom: 5px;
+  margin-left: 8px;
+}
+/*Способ оплаты*/
+.screening_block-control {
+  width: 959px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-body.screening-payment {
+  /*padding: 44px 33px 21px 33px;*/
+  padding: 0;
+  height: 146px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #928f94;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #292929;
+}
+.screening-payment_text {
+  margin-top: 44px;
+  margin-left: 33px;
+}
+.screening_btn.btn.text-center {
+  width: 233px;
+  height: 39px;
+  margin-right: 22px;
+  margin-bottom: 21px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #292929;
+}
+
+.screening-payment_control {
+  width: 280px;
+  border-left: 1px dashed #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.screening-payment_control {
+  width: 280px;
+  border-left: 1px dashed #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
+}
