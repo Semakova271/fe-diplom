@@ -45,14 +45,6 @@ console.log(requestObj,'requestObj')
     getLastTickets: builder.query({
       query: () => `last`,
     }),
-    // Добавляем эндпоинт для создания заказа
-    addOrder: builder.mutation({
-      query: (orderData) => ({
-        url: 'https://students.netoservices.ru/fe-diplom/order',
-        method: 'POST',
-        body: orderData,
-      }),
-    }),
   }),
 });
 
@@ -61,5 +53,6 @@ export const {
   useGetTrainsListQuery,
   useGetTrainIdQuery,
   useGetLastTicketsQuery,
-  useAddOrderMutation, // экспортируем новый хук
 } = api;
+/* providesTags: (result, error, arg) => [{type: "dataSearchTrains", data: arg}],*/
+/**    */

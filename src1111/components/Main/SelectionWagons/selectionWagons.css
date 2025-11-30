@@ -1,0 +1,684 @@
+/* ===== VARIABLES ===== */
+:root {
+  --color-primary: #ffa800;
+  --color-primary-light: rgba(255, 168, 0, 0.44);
+  --color-primary-lighter: rgba(255, 168, 0, 0.79);
+  --color-background: #e5e5e5;
+  --color-white: #ffffff;
+  --color-black: #292929;
+  --color-gray-dark: #2d2b2f;
+  --color-gray: #928f94;
+  --color-gray-light: #c4c4c4;
+  --color-gray-lighter: #e5e5e5;
+  --color-gray-bg: #f7f6f6;
+  --color-yellow-light: #ffd98f;
+  --color-error: #ff0000;
+  
+  --font-family: "Roboto", sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 30px;
+  --font-size-3xl: 72px;
+  
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 25px;
+  --spacing-2xl: 30px;
+  --spacing-3xl: 35px;
+  
+  --border-radius: 5px;
+  --border-radius-circle: 50%;
+  --shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== RESET & BASE STYLES ===== */
+.selection-wagons_wrapper {
+  background-color: var(--color-background);
+  display: flex;
+  min-height: 774px;
+  width: 1920px;
+}
+
+.selection-wagon-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: var(--font-family);
+}
+
+/* ===== MAIN CONTENT BLOCK ===== */
+.selection-wagon_Block {
+  flex-direction: column;
+  margin: 97px 256px 0 86px;
+  width: 959px;
+}
+
+.selection-wagon_title {
+  font-weight: 500;
+  font-size: var(--font-size-2xl);
+  line-height: 35px;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.selection-wagon_details {
+  width: 959px;
+  margin-top: 48px;
+  background: var(--color-white);
+}
+
+/* ===== BUTTON STYLES ===== */
+.selection-wagon_buttons-group {
+  padding: 36px 19px 32px;
+}
+
+.selection-wagon.come-back_btn {
+  padding: 0;
+  width: 76px;
+  height: 60px;
+  background: var(--color-primary);
+  border-radius: var(--border-radius);
+}
+
+.come-back-text_btn {
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  width: 325px;
+  height: 60px;
+  border: 1px solid var(--color-black);
+  border-radius: var(--border-radius);
+  margin-left: var(--spacing-sm);
+}
+
+/* ===== CARD COMPONENTS ===== */
+.trains-block_icon-train {
+  width: 28px;
+  height: 28px;
+  margin-top: var(--spacing-2xl);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-circle);
+}
+
+.trains-block_card-top {
+  display: flex;
+  flex-direction: row;
+  padding-left: var(--spacing-3xl);
+  width: 240px;
+  border-right: 1px solid var(--color-white);
+}
+
+.trains-block_card-top-svgIcon-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.trains-number {
+  display: flex;
+  margin-left: var(--spacing-2xl);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  color: var(--color-gray-dark);
+}
+
+.trains-block_body-group {
+  justify-content: space-between;
+}
+
+.card-body.trains-block_body {
+  padding: 28px 41px 0 36px;
+}
+
+.trains-block_card {
+  border-radius: 0;
+  border: none;
+  background: var(--color-gray-bg);
+  display: flex;
+  flex-direction: row;
+}
+
+.card-bottom.trains-block_bottom {
+  width: 237px;
+  border-left: 1px solid var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trains-block-svgIcon-wrap {
+  margin-left: var(--spacing-3xl);
+}
+
+.trains-block-timing {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+  line-height: 21px;
+  color: var(--color-black);
+}
+
+/* ===== QUANTITY TICKETS ===== */
+.quantity-tickets_block {
+  background: var(--color-white);
+  padding-top: 40px;
+  height: 337px;
+  border-bottom: 1px dashed var(--color-gray-light);
+}
+
+.quantity-tickets_block_title,
+.wagons-type_title {
+  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  line-height: 38px;
+  color: var(--color-black);
+  margin-left: 19px;
+}
+
+.quantity-tickets_block-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quantity-tickets_block-menu-item {
+  position: relative;
+  padding: 20px 41px 0 36px;
+  width: 317px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.selected_type-tickets {
+  background: var(--color-gray-bg);
+  box-shadow: var(--shadow);
+}
+
+.quantity-tickets_input-group {
+  position: relative;
+  height: 50px;
+  font-size: var(--font-size-lg);
+  line-height: 38px;
+  color: var(--color-black);
+  padding-left: var(--spacing-md);
+  align-items: center;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  background: var(--color-white);
+}
+
+.quantity-tickets_input-group.error-quantity {
+  border: 1px solid var(--color-error);
+}
+
+.quantity-tickets_input-group .services_tooltip {
+  background: rgb(242, 208, 122);
+  position: absolute;
+  left: 0;
+  top: 70px;
+}
+
+.quantity-tickets_input-group .services_tooltip::before {
+  content: "";
+  border: 20px solid transparent;
+  border-bottom-color: rgb(242, 208, 122);
+  position: absolute;
+  top: 4px;
+  margin: -43px 0 0 82px;
+}
+
+#exampleInputTypeTickets {
+  width: 35px;
+  padding: var(--spacing-xs);
+  border: none;
+}
+
+.quantity-tickets.adult_input-label,
+.quantity-tickets.child_input-label {
+  margin-top: 23px;
+  font-size: var(--font-size-base);
+  line-height: 19px;
+  color: var(--color-black);
+}
+
+.quantity-tickets.child_input-label {
+  color: var(--color-gray);
+}
+
+/* ===== WAGON TYPE SELECTION ===== */
+.wagons-type_block {
+  background: var(--color-white);
+  padding-top: 27px;
+}
+
+.wagons-type_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wagons-type_buttons-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: var(--spacing-lg) 119px 0 35px;
+}
+
+.wagons-type_buttons-text {
+  margin-top: 18px;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  color: var(--color-gray);
+}
+
+/* ===== SEATS DETAILS ===== */
+.available-seats-details_block-header {
+  display: flex;
+  height: 37px;
+  background: var(--color-primary-light);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.available-seats-details_buttons-block-label {
+  font-size: var(--font-size-lg);
+  line-height: 38px;
+  color: var(--color-gray-dark);
+  margin-left: 34px;
+}
+
+.available-seats-details_buttons-block-legend {
+  margin-right: var(--spacing-md);
+  font-size: var(--font-size-base);
+  line-height: 38px;
+  color: var(--color-black);
+}
+
+.available-seats-details_block {
+  background: var(--color-white);
+  padding: 29px 0 32px;
+}
+
+.available-seats-details_buttons-block {
+  display: flex;
+}
+
+/* ===== WAGON LAYOUTS ===== */
+.wagon_item {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  margin: 69px 0 0 20px;
+}
+
+.wagon-first_class { background-image: url(../../../img/image_first_class_wagon.png); }
+.wagon-second_class { background-image: url(../../../img/image_second_class_wagon.svg); }
+.wagon-third_class { background-image: url(../../../img/image_third_class_wagon.svg); }
+.wagon-fourth_class { background-image: url(../../../img/image_fourth_class_wagon.svg); }
+
+.utils-wagon_wrap {
+  position: absolute;
+  top: 29px;
+  left: 134px;
+  display: flex;
+  flex-direction: row;
+  height: 108px;
+  width: 712px;
+}
+
+/* Third Class (Platzkart) */
+.utils-wagon_wrap.wagon-third_class_wrap {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.utils-wagon-second_class_sector {
+  display: flex;
+  height: 61px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.utils-wagon_buttons-block_box {
+  width: 25px;
+  height: 60px;
+}
+
+.utils-wagon_buttons-block_box:nth-child(odd) {
+  margin-right: 31px;
+}
+
+.utils-wagon_button_box {
+  width: 25px;
+  height: 31px;
+  border: 1px solid var(--color-gray-lighter);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  padding: 2px;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.utils-wagon_buttons-block_side-box {
+  display: flex;
+  width: 86px;
+}
+
+.utils-wagon-second_class_sector.side-sector {
+  height: 23px;
+}
+
+.utils-wagon_button_box.side-button_box {
+  height: 22px;
+  width: 49%;
+  line-height: 10px;
+}
+
+/* Fourth Class (Seated) */
+.utils-wagon_wrap.wagon-fourth_class_wrap {
+  display: flex;
+  flex-direction: column;
+  height: 108px;
+  justify-content: space-between;
+}
+
+.utils-wagon-wagon-fourth_class_sector {
+  display: flex;
+  height: 48px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.utils-wagon-wagon-fourth_class_sector-row {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+  width: 688px;
+  margin: 1px auto;
+}
+
+.utils-wagon-wagon-fourth_class_sector-row.short-row {
+  width: 600px;
+}
+
+.wagon-fourth_class_seat-btn {
+  height: 22px;
+  width: 29px;
+}
+
+/* First Class (Lux) */
+.utils-wagon-wagon-first_class_sector {
+  display: flex;
+  height: 58px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.utils-wagon-wagon-first_class_sector-row {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.utils-wagon_buttons-block_box.first_class-buttons-block_box {
+  width: 86px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0;
+}
+
+.wagon-first_class_seat-btn {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+/* Second Class (Coupe) */
+.utils-wagon-wagon-second_class_sector {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.utils-wagon_buttons-block_box.second_class-buttons-block_box:nth-child(odd) {
+  margin-right: 31px;
+}
+
+/* ===== SEAT STATES ===== */
+.occupied_seat {
+  background: #959393;
+  color: var(--color-white);
+  cursor: not-allowed;
+}
+
+.utils-wagon_button_selected {
+  border: 2px solid var(--color-primary);
+}
+
+/* ===== WAGON NUMBERING ===== */
+.number-wagons_btn {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 30px;
+  color: var(--color-gray-dark);
+}
+
+.available-seats-details_wagon-number {
+  height: 161px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  background: var(--color-yellow-light);
+  font-weight: 700;
+  font-size: var(--font-size-3xl);
+  line-height: 72px;
+  color: var(--color-black);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.available-seats-details_wagon-number-text {
+  font-weight: 400;
+  font-size: var(--font-size-xl);
+  height: 15px;
+}
+
+.available-seats-details_wagon-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.available-seats-details_wagon-seats-details_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 769px;
+  padding: 33px 59px 0 85px;
+}
+
+/* ===== TABLE STYLES ===== */
+.amount-seats_table-title,
+.services-block_title_normal,
+.services-block_title_light {
+  font-size: var(--font-size-lg);
+  line-height: 21px;
+  color: var(--color-gray);
+}
+
+.services-block_title_light {
+  color: var(--color-gray-light);
+  margin-left: 11px;
+}
+
+.amount-seats_table-item {
+  height: 47px;
+}
+
+.amount-seats_round-num {
+  margin-left: 8px;
+  color: var(--color-black);
+}
+
+.amount-seats_details {
+  width: 100px;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  color: var(--color-black);
+}
+
+.amount-seats_details-num,
+.amount-seats_details-price {
+  width: 150px;
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  color: var(--color-black);
+}
+
+.amount-seats_details-price-currency {
+  margin-left: 8px;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* ===== SERVICES ===== */
+.services-buttons {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  width: 182px;
+  justify-content: space-between;
+}
+
+.wagon-services_btn {
+  display: flex;
+  justify-content: center;
+  width: 36px;
+  height: 34px;
+  padding: var(--spacing-xs);
+  border: 1px solid var(--color-black);
+  border-radius: var(--border-radius);
+}
+
+.wagon-services_btn.included,
+.wagon-services_btn.selected {
+  background: var(--color-primary-lighter);
+  border-color: var(--color-primary);
+}
+
+.wagon-services_btn:hover:enabled {
+  background: var(--color-primary);
+}
+
+/* ===== CONTROL BUTTONS ===== */
+.selection-wagon-content_control {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-block_btn {
+  margin: 102px 0 122px;
+  width: 222px;
+  height: 60px;
+  background: var(--color-primary);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.next-block_btn:disabled {
+  background: var(--color-gray);
+}
+
+/* ===== PRICE DISPLAY ===== */
+.available-seats-details_block-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: var(--spacing-xs);
+  padding-top: var(--spacing-xl);
+  height: 53px;
+}
+
+.available-seats-details_block-bottom_text {
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 28px;
+  color: var(--color-primary);
+}
+
+.available-seats-details_currency-icon {
+  margin: var(--spacing-xs) 38px 0 var(--spacing-xs);
+}
+
+/* ===== TOOLTIPS ===== */
+.services-button_wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.services_tooltip {
+  position: absolute;
+  visibility: hidden;
+  top: 40px;
+  background: var(--color-gray-lighter);
+  border-radius: var(--border-radius);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-align: center;
+}
+
+.services_tooltip.tooltip_quantity-tickets {
+  top: 80px;
+  background: none;
+  text-align: start;
+}
+
+.tooltip_text.text_quantity-tickets {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+}
+
+.tooltip_conditioning { width: 130px; height: 31px; left: -30px; }
+.tooltip_wifi { width: 84px; height: 31px; left: -22px; }
+.tooltip_linens { width: 84px; height: 31px; right: -20px; }
+.tooltip_coffee { width: 84px; height: 31px; left: -22px; }
+
+.tooltip_text {
+  font-size: var(--font-size-base);
+  line-height: 19px;
+  text-align: center;
+  color: var(--color-black);
+}
+
+/* ===== TEMPLATE BLOCK ===== */
+.wagon_template-block {
+  position: absolute;
+  width: 199px;
+  height: 72px;
+  top: -70px;
+  right: 42px;
+  background: #f3f3f3;
+  border-radius: var(--border-radius);
+  text-align: center;
+  padding-top: var(--spacing-md);
+}
+
+.template-text {
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+}

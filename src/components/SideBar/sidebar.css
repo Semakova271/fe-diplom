@@ -205,19 +205,14 @@ button.sidebar-side-block_btn.btn.text-center,
 .tooltip_side_block_departure,
 .tooltip_side_block_arrival {
  
- position: absolute;
-  visibility: visible !important;
+  position: absolute;
+  visibility: inherit!important;
   top: 50px;
   width: 300px;
-  height: auto;
-  padding: 8px;
-  font-size: 12px;
-  line-height: 1.4;
-  border: 1px solid #ff0000;
-  background: #fff;
-  color: #000;
-  z-index: 1000;
-  border-radius: 4px;
+  height: 28px;
+  font-size: 10px;
+  line-height: 28px;
+  border: 1px solid red;
 }
 /*timing*/
 

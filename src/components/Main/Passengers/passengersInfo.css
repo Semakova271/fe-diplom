@@ -1,41 +1,8 @@
-/* passengersInfo.css - Оптимизированные стили для информации о пассажирах */
-
-/* Переменные для цветов и размеров */
-:root {
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-dark: #292929;
-  --color-gray: #928f94;
-  --color-light-gray: #e5e5e5;
-  --color-lighter-gray: #f9f9f9;
-  --color-yellow: #ffa800;
-  --color-border: #c4c4c4;
-  --color-dashed-border: #928f94;
-  
-  --font-roboto: "Roboto", sans-serif;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
-  
-  --spacing-xs: 16px;
-  --spacing-sm: 20px;
-  --spacing-md: 23px;
-  --spacing-lg: 35px;
-  --spacing-xl: 44px;
-  --spacing-xxl: 95px;
-  
-  --border-radius: 5px;
-  --border-radius-circle: 32px;
-  --shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-/* Основные стили контейнера */
 .passengers-info_wrapper {
-  background-color: var(--color-light-gray);
+  background-color: #e5e5e5;
   display: flex;
   min-height: 774px;
-  width: 100%;
-  max-width: 1920px;
+  width: 1920px;
 }
 
 .passengers-info_content {
@@ -43,272 +10,197 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .passengers-info_block {
-  margin-top: var(--spacing-xxl);
-  margin-left: 4.48%; /* 86px / 1920px */
-  width: 100%;
+  margin-top: 95px;
+
+  margin-left: 86px;
 }
 
 .passengers-info_block:last-child {
   margin-bottom: 0;
 }
 
-/* Блоки пассажиров */
 .passengers-info_block-item {
-  width: 49.9%; /* 958px / 1920px */
-  max-width: 958px;
-  margin-top: var(--spacing-xl);
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  width: 958px;
+  margin-top: 44px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
 }
 
 .passengers-info_block-item:first-child {
   margin-top: 0;
 }
-
-.passengers-info_block-item:hover {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Верхняя часть блока */
 .passengers-info_block-item_top {
   height: 107px;
   display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
   align-items: center;
-  padding: 0 var(--spacing-md);
-  background: var(--color-lighter-gray);
 }
 
-.passengers-info_block-item_top.add-passenger {
-  height: 97px;
-  padding: 0 26px 0 var(--spacing-md);
-  justify-content: space-between;
-  background: var(--color-white);
+.passengers-info_block-item_top:first-child {
+  margin-top: 0;
+  background: #f9f9f9;
 }
 
-/* Кнопки */
-.passengers-info_show_btn {
+button.passengers-info_show_btn.btn {
   width: 32px;
   height: 32px;
-  border-radius: var(--border-radius-circle);
+  margin-left: 23px;
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   background-image: url(../../../img/passengers/icon_passengers_circle_plus.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
 }
-
-.passengers-info_show_btn:hover {
-  transform: scale(1.1);
-}
-
-.passengers-info_show_btn.expand-button {
+button.passengers-info_show_btn.btn.expand-button {
   background-image: url(../../../img/passengers/icon_passengers_line.svg);
 }
+.line__icon {
+  margin-bottom: 4px;
+}
+.plus__icon {
+  margin-bottom: 3px;
+}
+.passengers-info_block-item_title {
+  margin-bottom: 0;
+  margin-left: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
 
-.passengers-info_delete_btn {
+  color: #292929;
+}
+
+button.passengers-info_delete_btn.btn.text-center {
+  order: 999;
   margin-left: auto;
   margin-right: 40px;
-  padding: 8px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  padding: 0;
 }
 
-.passengers-info_delete_btn:hover {
-  transform: scale(1.1);
-}
-
-.add-passenger_btn {
+button.add-passenger_btn.btn.text-center_btn.btn.text-center {
   background-image: url(../../../img/passengers/icon_passengers_plus.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
 }
 
-.add-passenger_btn:hover {
-  transform: scale(1.1);
-}
-
-/* Заголовки */
-.passengers-info_block-item_title,
-.add-passenger_block-item_title {
-  margin: 0 0 0 var(--spacing-xs);
-  font-family: var(--font-roboto);
-  font-style: normal;
-  font-weight: var(--font-weight-normal);
-  font-size: clamp(1.25rem, 2vw, 30px);
-  line-height: 1.17;
-  color: var(--color-dark);
-}
-
-.add-passenger_block-item_title {
-  margin: 0;
-}
-
-/* Тело блока с анимацией */
 .passengers-info_block-item_body {
   height: 0;
   overflow: hidden;
-  transition: height 0.5s ease;
+  transition: height 0.5s ease 0s;
 }
-
 .passengers-info_block-item_body.active-show {
   height: 711px;
-  border-top: 1px dashed var(--color-dashed-border);
+  border-top: 1px dashed #928f94;
+
+  transition: height 0.5s ease 0s;
 }
 
-.passengers-info_block-item_body_divider {
-  border-bottom: 1px dashed var(--color-dashed-border);
-}
-
-/* Формы */
+/*Form*/
 .passengers-data_form {
-  padding: 38px var(--spacing-lg) 31px 36px;
+  padding: 38px 35px 31px 36px;
 }
-
 .passengers-data_fullname {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 45px;
-  gap: 20px;
 }
-
-.form-group {
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 .form-group.group-fullname {
-  width: 280px;
-  flex: 1;
+  margin-bottom: 0;
 }
-
-/* Лейблы форм */
-.passengers-data_fullname_label,
+label.passengers-data_fullname_label,
 .passengers-data_gender_label,
-.passengers-data_birthdate_label,
-.passengers-data_document_label {
-  font-family: var(--font-roboto);
+.passengers-data_birthdate_label {
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: var(--font-weight-normal);
-  font-size: clamp(0.875rem, 1vw, 16px);
-  line-height: 1.19;
-  color: var(--color-gray);
-  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #928f94;
 }
 
-/* Поля ввода */
 .input-fullname,
 .input-birthdate {
-  width: 100%;
+  width: 280px;
   height: 50px;
-  background: var(--color-white);
-  border: 1px solid var(--color-gray);
-  border-radius: var(--border-radius);
-  padding: 0 16px;
-  font-family: var(--font-roboto);
-  font-size: 16px;
-  transition: border-color 0.3s ease;
+  background: #ffffff;
+  border: 1px solid #928f94;
+  border-radius: 5px;
 }
-
-.input-fullname:focus,
-.input-birthdate:focus {
-  outline: none;
-  border-color: var(--color-yellow);
-}
-
-/* Группа пол и дата рождения */
-.passengers-data_gender_&_birthdate {
+.passengers-data_gender_\&_birthdate {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-lg);
-  margin-top: 49px;
-  flex-wrap: wrap;
 }
-
+.input-birthdate {
+  width: 240px;
+}
 .form-group.group-gender,
 .form-group.group-birthdate {
   margin: 0;
+  margin-top: 49px;
   display: flex;
   flex-direction: column;
-}
-
-.form-group.group-gender {
   width: 204px;
 }
-
 .form-group.group-birthdate {
   width: 240px;
-  flex: 1;
+  margin-left: 35px;
 }
 
-/* Кнопки пола */
-.btn-gender {
+button.btn.btn-gender {
   width: 101.15px;
   height: 50px;
   background: inherit;
-  border: 1px solid var(--color-gray);
-  border-radius: var(--border-radius);
-  font-family: var(--font-roboto);
+  border: 1px solid #928f94;
+  border-radius: 5px 5px 5px 5px;
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: var(--font-weight-black);
-  font-size: clamp(1.25rem, 2vw, 30px);
-  line-height: 1.17;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
   text-transform: uppercase;
-  color: var(--color-black);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  color: #000000;
 }
-
-.btn-gender.gender-active {
-  background: var(--color-yellow);
-  border-color: var(--color-yellow);
+button.btn.btn-gender.gender-active {
+  background: #ffa800;
 }
-
-.btn-gender:hover:not(.gender-active) {
-  background: rgba(255, 168, 0, 0.1);
-}
-
-/* Чекбокс ограниченной подвижности */
 .passengers-data_disabled-person {
   margin-top: 45px;
-  display: flex;
-  align-items: center;
 }
-
 .passengers-data_disabled-person_text {
-  margin-left: var(--spacing-sm);
-  font-family: var(--font-roboto);
+  margin-left: 20px;
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: var(--font-weight-normal);
-  font-size: clamp(1rem, 1.5vw, 18px);
-  line-height: 1.17;
-  color: var(--color-dark);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
 }
 
-/* Форма документов */
+/*FormDocs*/
+.passengers-data_disabled-person {
+  margin-top: 45px;
+}
+
 .passengers-data_docs {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: var(--spacing-lg);
-  flex-wrap: wrap;
+  justify-content: flex-start; /* margin-left: 35px; */
+}
+
+.passengers-info_block-item_body_divider {
+  border-bottom: 1px dashed #928f94;
 }
 
 .form.passengers-docs_form {
@@ -321,81 +213,73 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  flex: 1;
-  min-width: 200px;
+  margin-left: 35px;
 }
-
+.form-group.group-fullname {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
 .passengers-data_type {
-  margin-left: 0;
-  flex: 1;
+  margin-left: 35px;
 }
 
-/* Кнопка следующего пассажира */
-.next-passenger_btn {
-  width: min(303px, 100%);
+button.next-passenger_btn.btn.text-center {
+  width: 303px;
   height: 52px;
-  border: 1px solid var(--color-dark);
-  border-radius: var(--border-radius);
-  margin: 39px 31px 28px 0;
-  color: var(--color-dark);
-  font-family: var(--font-roboto);
+  border: 1px solid #292929;
+  border-radius: 5px;
+  margin: 39px 31px 28px 0px;
+  color: #292929;
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: var(--font-weight-bold);
-  font-size: clamp(1rem, 1.5vw, 24px);
-  line-height: 1.17;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }
+/*add passenger*/
 
-.next-passenger_btn:hover:not(:disabled) {
-  background: var(--color-dark);
-  color: var(--color-white);
+.passengers-info_block-item_top.add-passenger {
+  height: 97px;
+  padding-left: 26px;
+  padding-right: 38px;
+  justify-content: space-between;
 }
-
-.next-passenger_btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* Блоки управления */
 .passengers-info_section_control,
 .passengers-info_block_control {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
 }
-
 .passengers-info_block_control {
   justify-content: space-between;
   height: 120px;
-  border-top: 1px dashed var(--color-dashed-border);
-  align-items: center;
-  padding: 0 20px;
+  border-top: 1px dashed #928f94;
 }
 
 .passengers-info_section_control {
-  margin-top: 0;
+  margin-top: 0px;
   position: relative;
 }
-
 .passengers-info_section_control > .next-block_btn {
-  margin: 103px 0 140px !important;
-}
-
-/* Статусы */
-.passengers-info_status-done {
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
+  margin-bottom: 140px !important;
+  margin-top: 103px !important;
 }
 
 .passengers-info_status-done_text {
   margin-left: 15px;
-  font-weight: var(--font-weight-normal);
-  font-size: clamp(1rem, 1.5vw, 18px);
-  line-height: 1.17;
-  color: var(--color-white);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.passengers-info_status-done {
+  margin-left: 24px;
+  margin-top: 38px;
+  display: flex;
+  height: 32px;
+  align-items: center;
 }
 
 .passengers-info_status-error {
@@ -403,134 +287,14 @@
   margin-left: 24px;
   flex-direction: row;
   align-items: center;
-  gap: var(--spacing-xs);
 }
 
 .passengers-info_error-message {
-  font-size: clamp(1rem, 1.5vw, 18px);
-  line-height: 1.17;
+  font-size: 18px;
+  line-height: 21px;
 }
 
-.passengers-info_error-text {
+p.passengers-info_error-text {
   margin: 0;
-}
-
-/* Адаптивность для планшетов */
-@media (max-width: 1024px) {
-  .passengers-info_wrapper {
-    min-height: auto;
-    padding: 20px;
-  }
-  
-  .passengers-info_block {
-    margin-left: 0;
-    margin-top: 50px;
-  }
-  
-  .passengers-info_block-item {
-    width: 100%;
-    max-width: none;
-  }
-  
-  .passengers-data_fullname {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-group.group-fullname {
-    width: 100%;
-  }
-  
-  .passengers-data_gender_&_birthdate {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-group.group-gender,
-  .form-group.group-birthdate {
-    width: 100%;
-  }
-  
-  .passengers-data_docs {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-  .passengers-info_block-item_top {
-    height: auto;
-    padding: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .passengers-info_block-item_top.add-passenger {
-    height: auto;
-    padding: 15px;
-  }
-  
-  .passengers-info_delete_btn {
-    margin-right: 0;
-  }
-  
-  .passengers-data_form {
-    padding: 20px;
-  }
-  
-  .passengers-info_block_control {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  .next-passenger_btn {
-    margin: 0;
-    width: 100%;
-  }
-  
-  .passengers-info_status-done,
-  .passengers-info_status-error {
-    margin-left: 0;
-    justify-content: center;
-  }
-}
-
-/* Поддержка высококонтрастного режима */
-@media (prefers-contrast: high) {
-  .passengers-info_block-item {
-    border-width: 2px;
-  }
-  
-  .passengers-info_block-item_body_divider,
-  .passengers-info_block_control {
-    border-top-width: 2px;
-  }
-  
-  .input-fullname,
-  .input-birthdate,
-  .btn-gender {
-    border-width: 2px;
-  }
-}
-
-/* Поддержка уменьшения движения */
-@media (prefers-reduced-motion: reduce) {
-  .passengers-info_block-item,
-  .passengers-info_show_btn,
-  .passengers-info_delete_btn,
-  .add-passenger_btn,
-  .btn-gender,
-  .next-passenger_btn,
-  .passengers-info_block-item_body {
-    transition: none;
-  }
-  
-  .passengers-info_show_btn:hover,
-  .passengers-info_delete_btn:hover,
-  .add-passenger_btn:hover {
-    transform: none;
-  }
+  margin-left: 16px;
 }

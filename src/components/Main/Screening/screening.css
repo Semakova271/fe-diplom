@@ -1,35 +1,34 @@
-/* ===== MAIN SECTION ===== */
-.section.screening {
+section.screening {
   margin-left: 86px;
   width: 958px;
 }
-
 .screening-content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-/* ===== TRAIN BLOCKS ===== */
 .screening-block {
   width: 959px;
   margin-top: 95px;
   margin-right: 257px;
 }
-
-.screening-block_card {
-  width: 959px;
-  border: 1px solid #c4c4c4;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-}
-
 .screening-block_card_title {
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
   color: #292929;
 }
-
+.screening-train_card.card {
+  border: none;
+  display: flex;
+  flex-direction: row;
+}
+.card.screening-block_card {
+  width: 959px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
+}
 .screening-block_card-top {
   height: 95px;
   display: flex;
@@ -37,30 +36,18 @@
   margin-left: 30px;
 }
 
-.screening-block_card-body {
-  border-top: 1px solid #928f94;
-  display: flex;
-}
-
-/* ===== TRAIN CARDS ===== */
-.screening-train_card.card {
-  border: none;
-  display: flex;
-  flex-direction: row;
-}
-
 .card-top.screening-train {
   width: 197px;
   display: flex;
   flex-direction: column;
+
   background: #e4e0e9;
 }
-
-.card-body.screening-train {
-  padding: 54px 36px 0 39px;
+.card-body.screeneng-train {
   width: 479px;
+  padding-left: 39px;
+  padding-right: 36px;
 }
-
 .screening-train-svgIcon-wrap {
   margin-top: 58px;
   margin-left: 43px;
@@ -71,31 +58,38 @@
   margin-top: 17px;
 }
 
-.screening-train-group {
+.screening-block_card-body {
+  border-top: 1px solid #928f94;
+}
+.card-body.screening-train {
+  padding: 0;
+  padding-left: 39px;
+  padding-top: 54px;
+  padding-right: 36px;
+  width: 479px;
+}
+.screening-train-group.d-flex.flex-row {
   justify-content: space-between;
 }
-
-.screening-train-reverse-group {
+.screening-train-reverse-group.d-flex.flex-row {
   margin-top: 63px;
 }
 
-.trails-duration-block .screening-train-svgIcon-wrap {
+.trails-duration-block > .screening-train-svgIcon-wrap {
   margin-top: 7px;
   margin-left: 3px;
 }
-
-.screening-train-reverse__icon {
+img.screening-train-reverse__icon {
   transform: rotate(180deg);
 }
-
-/* ===== TRAIN BOTTOM SECTION ===== */
-.screening-train_bottom {
+.card-bottom.screening-train_bottom {
   width: 282px;
   border-left: 1px dashed #e5e5e5;
 }
 
 .screening-available-vagons {
-  padding: 0 22px 0 27px;
+  padding-left: 27px;
+  padding-right: 22px;
   margin-top: 41px;
 }
 
@@ -112,16 +106,18 @@
   display: flex;
   justify-content: flex-end;
 }
+/*Пассажиры*/
 
-/* ===== PASSENGERS SECTION ===== */
 .screening-block_passengers,
 .screening-block_payment {
   margin-top: 45px;
 }
-
-.screening-block_passengers {
+.screening-block.screening-block_passengers {
   display: flex;
   width: 959px;
+}
+.screening-block_card-body {
+  display: flex;
 }
 
 .card-desk {
@@ -135,16 +131,12 @@
   border: none;
   margin-top: 30px;
 }
-
-.screening-block_card-body-item_card:last-child {
+.screening-block_card-body-item_card:nth-last-child(1) {
   margin-bottom: 60px;
 }
-
 .screening-block_card-body-item_card.card:not(:last-child) {
   border-bottom: 1px dashed #e5e5e5;
 }
-
-/* ===== PASSENGER CARDS ===== */
 .card-top.passengers {
   width: 156px;
   display: flex;
@@ -152,19 +144,22 @@
   align-items: center;
 }
 
-.passengers_card-top-text {
-  margin: 17px 0 46px 0;
-  font-family: "Roboto", sans-serif;
+span.passengers_card-top-text {
+  margin-top: 17px;
+  margin-bottom: 46px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+
   color: #292929;
 }
 
 .passengers-svgIcon-wrap {
   width: 68px;
 }
-
 .card-body.passengers {
   padding: 0;
 }
@@ -174,9 +169,10 @@
   flex-direction: column;
   margin-bottom: 46px;
 }
-
 .passengers_body-text {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   margin-bottom: 5px;
@@ -188,8 +184,7 @@
   margin-bottom: 0;
 }
 
-/* ===== PASSENGER CONTROLS ===== */
-.screening-passengers_control {
+.screening-passengers_control.passengers_card-bottom {
   width: 281px;
   display: flex;
   flex-direction: column;
@@ -202,11 +197,15 @@
   display: flex;
   width: 100%;
   margin-bottom: 28px;
-  padding: 0 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   justify-content: space-evenly;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   font-size: 30px;
   line-height: 35px;
+
   color: #292929;
 }
 
@@ -214,12 +213,11 @@
   font-weight: 700;
 }
 
-.control_price-block_currency {
+svg.control_price-block_currency {
   margin-bottom: 5px;
   margin-left: 8px;
 }
-
-/* ===== PAYMENT SECTION ===== */
+/*Способ оплаты*/
 .screening_block-control {
   width: 959px;
   display: flex;
@@ -227,20 +225,38 @@
 }
 
 .card-body.screening-payment {
+  /*padding: 44px 33px 21px 33px;*/
   padding: 0;
   height: 146px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #928f94;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+
   color: #292929;
 }
-
 .screening-payment_text {
   margin-top: 44px;
   margin-left: 33px;
+}
+.screening_btn.btn.text-center {
+  width: 233px;
+  height: 39px;
+  margin-right: 22px;
+  margin-bottom: 21px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #292929;
 }
 
 .screening-payment_control {
@@ -251,17 +267,9 @@
   align-items: flex-end;
 }
 
-/* ===== BUTTONS ===== */
-.screening_btn.btn {
-  width: 233px;
-  height: 39px;
-  margin: 0 22px 21px 0;
-  border: 1px solid #292929;
-  border-radius: 5px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  color: #292929;
+.screening-payment_control {
+  width: 280px;
+  border-left: 1px dashed #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
 }
