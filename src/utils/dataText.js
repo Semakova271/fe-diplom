@@ -1,5 +1,5 @@
-import author_1 from "../img/feedback/auhtor_1.jpg";
-import author_2 from "../img/feedback/author_2.jpg";
+import author_1 from "../img/auhtor_1.jpg";
+import author_2 from "../img/author_2.jpg";
 
 
 export const optionsPayment = [

@@ -2,14 +2,14 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";
-import HomePage from "./components/Pages/HomePage";
-import SelectionTrain from "./components/Pages/SelectionTrain";
-import SelectionWagons from "./components/Pages/SelectionWagons";
-import PassengersInfo from "./components/Pages/PassengersInfo";
-import PersonalData from "./components/Pages/PersonalData";
-import Screening from "./components/Pages/Screening";
-import OrderResult from "./components/Pages/OrderResult";
-import NotFound from "./components/Pages/NotFound";
+import HomePage from "./components/Pages/Pages";
+import SelectionTrain from "./components/Pages/Pages";
+import SelectionWagons from "./components/Pages/Pages";
+import PassengersInfo from "./components/Pages/Pages";
+import PersonalData from "./components/Pages/Pages";
+import Screening from "./components/Pages/Pages";
+import OrderResult from "./components/Pages/Pages";
+import NotFound from "./components/Pages/Pages";
 import "./App.css";
 
 function App() {

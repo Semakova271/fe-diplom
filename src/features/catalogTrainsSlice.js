@@ -101,6 +101,9 @@ const catalogTrainsSlice = createSlice({
       const { data } = action.payload;
       state.dataWagons = data;
     },
+    clearDataSeats: (state) => {
+      state.dataWagons = {};
+    },
     upDateCatalog(state, action) {
       const { data } = action.payload;
 
@@ -127,6 +130,7 @@ export const {
   setDataWagons,
   setTrainsParameters,
   upDateCatalog,
+  clearDataSeats,
 } = catalogTrainsSlice.actions;
 
 export default catalogTrainsSlice.reducer;

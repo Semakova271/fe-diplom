@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./header.css";
 
 // Компонент логотипа

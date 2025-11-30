@@ -6,11 +6,11 @@ import { Autocomplete, TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 // Компоненты
-import ControlledInput from "../Molecules/MUI/ControlledInput";
-import ControlledCheckbox from "../Molecules/MUI/ControlledCheckbox";
-import FormCalendar from "../Molecules/ReactCalendar";
-import { Title, Button, CardTitle, MySvgIcon } from "../Atoms/Atoms";
-import Info from "../Molecules/Info";
+import ControlledInput from "../Molecules/MUI/components";
+import ControlledCheckbox from "../Molecules/MUI/components";
+import FormCalendar from "../Molecules/Molecules/Moleculescomponent";
+import { Title, Button, CardTitle, MySvgIcon } from "../BasicComponents/BasicComponents";
+import Info from "../Molecules/Molecules/Moleculescomponent";
 
 // API и утилиты
 import { useGetCityesNameQuery } from "../../features/myApi";
@@ -22,8 +22,8 @@ import { capitalizeFirstLetter, getUrlSearch } from "../../utils/trainSelectionU
 
 // Изображения
 import ic_arrow from "../../img/ic_arrow.svg";
-import icon_green_btn from "../../img/passengers/icon_green_btn.svg";
-import icon_error_docs from "../../img/passengers/icon_error_docs.svg";
+import icon_green_btn from "../../img/icon_green_btn.svg";
+import icon_error_docs from "../../img/icon_error_docs.svg";
 
 // Стили для MUI компонентов
 const useAutocompleteStyles = makeStyles({

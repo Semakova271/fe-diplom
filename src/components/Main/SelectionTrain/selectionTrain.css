@@ -1,3 +1,4 @@
+/* ===== MAIN LAYOUT ===== */
 .main-content__wrap {
   position: relative;
   margin-top: 158px;
@@ -18,22 +19,22 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-section#trains-menu {
+
+/* ===== TRAINS MENU SECTION ===== */
+#trains-menu {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
-  margin-left: 86px;
+  margin: 0 0 0 86px;
   width: 959px;
 }
 
-/*Form*/
+/* ===== SEARCH FORM ===== */
 .search-tickets_form {
   position: absolute;
   left: 215px;
   top: 111px;
   width: 1490px;
   height: 327px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -43,25 +44,23 @@ section#trains-menu {
 .search-tickets_form_departure_title {
   width: 50%;
   margin-top: 28px;
-
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 30px;
   line-height: 35px;
   color: #ffffff;
 }
+
 .search-tickets_form_destination {
   width: 50%;
-  padding-left: 44px;
-  padding-right: 18px;
+  padding: 0 18px 0 44px;
 }
 
 .search-tickets_form_date-trails {
   width: 50%;
-  padding-right: 42px;
-  padding-left: 18px;
+  padding: 0 42px 0 18px;
 }
+
 .search-tickets_form_departure_title:last-child {
   margin-left: -7px;
 }
@@ -70,53 +69,53 @@ section#trains-menu {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 41px;
-  margin-top: 30px;
+  margin: 30px 41px 0 0;
 }
-/*ProgressBar*/
+
+/* ===== PROGRESS BAR ===== */
 .progress {
   position: relative;
   width: 1919px;
   height: 98px;
-
   background: #3e3c41;
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 35px;
-
   color: #ffffff;
 }
+
 .progress-bar {
   position: relative;
-  border-radius: 0px;
+  border-radius: 0;
   height: 100%;
   background-color: #3e3c41;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   clip-path: polygon(
     0% 0px,
-    /* верхняя левая */ 0px 0%,
-    /* верхняя левая */ calc(100% - 47px) 0%,
-    /* верхняя правая */ 100% 47px,
-    /* верхняя правая */ 100% calc(100% - 47px),
-    /* нижняя правая */ calc(100% - 47px) 100%,
-    /* нижняя правая */ 0px 100%,
-    /* нижняя левая */ 0 calc(100% - 47px) /* нижняя левая */
+    0px 0%,
+    calc(100% - 47px) 0%,
+    100% 47px,
+    100% calc(100% - 47px),
+    calc(100% - 47px) 100%,
+    0px 100%,
+    0 calc(100% - 47px)
   );
 }
+
 .progress-bar.step-tickets {
   width: 621px;
   background-color: #ffa800;
   z-index: 4;
 }
+
 .step_active {
   background: #ffa800;
 }
+
 .progress-bar.step-pay {
   position: absolute;
   left: 960px;
@@ -124,6 +123,7 @@ section#trains-menu {
   justify-content: flex-start;
   z-index: 2;
 }
+
 .step-passenger {
   position: absolute;
   left: 573px;
@@ -131,6 +131,7 @@ section#trains-menu {
   justify-content: flex-start;
   z-index: 3;
 }
+
 .progress-bar.step-validate {
   position: absolute;
   left: 1345px;
@@ -154,7 +155,7 @@ section#trains-menu {
   right: -2px;
 }
 
-span.numbering {
+.numbering {
   width: 53px;
   height: 53px;
   border-radius: 53px;
@@ -165,47 +166,55 @@ span.numbering {
 .margin-numbering {
   margin-left: 70px;
 }
+
 .progress-bar-name {
   margin-left: 28px;
 }
 
-/*SearchControls*/
+/* ===== SEARCH CONTROLS ===== */
 .search-controls__wrap {
   margin-top: 95px;
   height: 43px;
   flex-flow: row wrap;
 }
+
 .dropend .dropdown-toggle::after {
   border: none;
 }
+
 .amount-text,
 .button-sorted-trains,
 .sorted-text,
 .puncts-list-text {
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #928f94;
 }
+
 .amount_block {
   width: 197px;
 }
-span.amount-text {
+
+.amount-text {
   width: 105px;
   height: 22px;
 }
-.dropdown.dropend {
+
+.dropend.dropdown {
   margin-left: 270px;
 }
-span.sorted-text {
+
+.sorted-text {
   color: #292929;
 }
+
 .dropdown-sorted-trains {
   color: #928f94;
   transform: translate(145px, -2px);
 }
+
 .dropdown-sorted-trains:focus,
 .dropdown-sorted-trains:active {
   border: none;
@@ -216,18 +225,16 @@ span.sorted-text {
   margin-top: -8px;
   height: 22px;
 }
+
 .dropdown-sorted-trains.show {
   width: 137px;
   height: 117px;
-
-  border-radius: 0px;
+  border-radius: 0;
   padding: 0;
   background: #f7f5f9;
   border: none;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 21px;
   display: flex;
@@ -235,24 +242,23 @@ span.sorted-text {
   justify-content: space-between;
   transform: translate(145px, -8px) !important;
 }
+
 .sorted-trains-item {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 21px;
-
   color: #3e3c41;
 }
 
-button.dropdown-item.sorted-trains-item {
-  padding: 0;
-  padding-left: 7px;
+.dropdown-item.sorted-trains-item {
+  padding: 0 0 0 7px;
   height: 38px;
 }
-button.dropdown-item.sorted-trains-item:hover {
+
+.dropdown-item.sorted-trains-item:hover {
   background: #ffca62;
 }
+
 .search-controls-puncts__wrap {
   display: flex;
   margin-left: auto;
@@ -264,28 +270,27 @@ button.dropdown-item.sorted-trains-item:hover {
   justify-content: space-evenly;
   padding: 0;
   list-style-type: none;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 21px;
   width: 78px;
 }
-button.btn.puncts-list__btn {
+
+.puncts-list__btn {
   padding: 0;
   height: 22px;
   width: 22px;
   line-height: 20px;
   color: #928f94;
 }
-.btn.puncts-list__btn.active-limit {
+
+.puncts-list__btn.active-limit {
   color: #292929;
 }
 
-/*Trains-cards*/
+/* ===== TRAINS CARDS ===== */
 .trains-menu-wrap.d-flex {
-  margin-top: 26px;
-  margin-right: 256px;
+  margin: 26px 256px 0 0;
   flex-direction: column;
 }
 
@@ -294,110 +299,112 @@ button.btn.puncts-list__btn {
   flex-direction: column;
   max-width: 959px;
 }
+
 .trains-menu-item_card.card {
   display: flex;
   flex-direction: row;
   width: 959px;
   background: #ffffff;
   border: 1px solid #c4c4c4;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  margin: 0;
-  margin-bottom: 49px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 0 0 49px 0;
 }
+
 .card-top.trains-menu-item {
   display: flex;
   flex-direction: column;
   width: 197px;
   background-color: #e4e0e9;
 }
+
 .trains-menu-svgIcon-wrap {
-  margin-top: 58px;
-  margin-left: 43px;
+  margin: 58px 0 0 43px;
 }
+
 .trail {
-  margin-top: 17px;
-  margin-bottom: 31px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  margin: 17px 0 31px 0;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 19px;
-
   color: #292929;
 }
+
 .trains-menu.trains-number {
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   width: 93px;
-  margin-left: 39px;
+  margin: 0 0 0 39px;
   color: #3e3c41;
 }
 
-span.trail-city-name {
+.trail-city-name {
   margin-left: 25px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 19px;
-
   color: #292929;
 }
-i.fa.fa-long-arrow-right {
+
+.fa-long-arrow-right {
   margin-left: 5px;
   color: #292929;
 }
+
 .train-name {
   margin-left: 25px;
 }
+
 .card-body.trains-menu-item {
   width: 479px;
   padding: 54px 36px 23px 39px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   color: #000000;
 }
+
 .trains-menu-group {
   justify-content: space-between;
 }
+
 .trains-menu.train-departure-from {
   width: 155px;
 }
+
 .trains-menu.train-departure-to {
   width: 164px;
 }
+
 .train-departure.data-trains-railway_station_name {
   color: #928f94;
 }
+
 .trains-menu-reverse-group {
   margin-top: 46px;
   justify-content: space-between;
 }
+
 .train-departure.data-trains-datetime {
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
+
 .trails-duration {
   font-size: 18px;
   line-height: 21px;
-
   color: #c4c4c4;
 }
-.trails-duration-block > .trains-menu-svgIcon-wrap {
+
+.trails-duration-block .trains-menu-svgIcon-wrap {
   display: flex;
   justify-content: center;
-  margin-left: 5px;
-  margin-top: 5px;
+  margin: 5px 0 0 5px;
 }
-img.trains-menu-reverse__icon {
+
+.trains-menu-reverse__icon {
   transform: rotate(180deg);
   margin-left: 0;
 }
@@ -406,26 +413,25 @@ img.trains-menu-reverse__icon {
   width: 283px;
   border-left: 1px dashed #e5e5e5;
 }
+
 .trains-menu-available-wagons {
   width: 283px;
-  padding-left: 27px;
-  padding-right: 22px;
+  padding: 0 22px 0 27px;
   margin-top: 41px;
 }
 
 .available-wagons_block-item {
   position: relative;
   margin-bottom: 33px;
-  position: relative;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
+
 .available-seats.wrap {
   position: absolute;
   visibility: hidden;
 }
+
 .available-seats_block {
   position: absolute;
   top: 28px;
@@ -446,19 +452,22 @@ img.trains-menu-reverse__icon {
   border: 20px solid transparent;
   border-bottom-color: #e5e5e5;
   position: absolute;
-  margin: -43px 0px 0 72px;
+  margin: -43px 0 0 72px;
 }
+
 .available-seats-item {
   display: flex;
   justify-content: space-between;
 }
+
 .available-seats_group-text {
   width: 48%;
   display: flex;
   justify-content: space-between;
 }
+
 .wagons_type,
-span.available-seats_name {
+.available-seats_name {
   font-size: 16px;
   line-height: 19px;
   width: 85px;
@@ -468,7 +477,6 @@ span.available-seats_name {
 .amount-seats,
 .available-seats {
   margin-left: 15px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -479,6 +487,7 @@ span.available-seats_name {
 .available-seats {
   margin-left: 10px;
 }
+
 .wagons_trains-menu_item-class.amount-seats.text-center:hover {
   cursor: pointer;
 }
@@ -489,13 +498,14 @@ span.available-seats_name {
   display: flex;
   justify-content: space-between;
 }
+
 .text-min-price {
   line-height: 19px;
   color: #928f94;
   margin-right: 5px;
 }
 
-span.wagons-type_min-price,
+.wagons-type_min-price,
 .available-seats_min-price {
   margin-top: -7px;
   font-weight: 700;
@@ -503,12 +513,14 @@ span.wagons-type_min-price,
   line-height: 28px;
   color: #2d2b2f;
 }
+
 .currency-icon {
   margin-left: 5px;
   color: #928f94;
   font-size: 24px;
   font-weight: 300;
 }
+
 .trains-menu_icons-block {
   color: #c4c4c4;
   font-size: 18px;
@@ -516,100 +528,96 @@ span.wagons-type_min-price,
   justify-content: flex-end;
   margin-right: 28px;
 }
-.icon_rocket.card-icon_rocket.ml-2 {
+
+.icon_rocket.card-icon_rocket {
   width: 20px;
   height: 18px;
   filter: grayscale(2%);
   opacity: 0.2;
 }
+
 .trains-menu_control {
-  padding-left: 27px;
-  padding-right: 22px;
-  padding-bottom: 23px;
+  padding: 0 22px 23px 27px;
   margin-top: 17px;
   display: flex;
   justify-content: flex-end;
 }
-button.selection-seats_btn {
-  font-family: "Roboto";
-  font-style: normal;
+
+.selection-seats_btn {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-
   color: #ffffff;
   width: 228px;
   height: 39px;
-
   background: #ffa800;
   border-radius: 5px;
 }
-button.selection-seats_btn:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+.selection-seats_btn:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
-button.selection-seats_btn:active {
+
+.selection-seats_btn:active {
   box-shadow: none;
   background: #e5e5e5;
   color: #ffa800;
   border: 1px solid #ffa800;
 }
 
-/*Пагинация на странице выбор поезда*/
+/* ===== PAGINATION ===== */
 .selection-trains-pagination {
   display: flex;
   justify-content: flex-end;
-  margin: 0;
-  margin-bottom: 193px;
+  margin: 0 0 193px 0;
   list-style-type: none;
 }
-li.trains-menu-pagination__item {
+
+.trains-menu-pagination__item {
   height: 75px;
   width: 85px;
   margin-left: 35px;
 }
-/*.trains-menu-pagination__item-link:first-child {
- background: #ffa800;
-}*/
+
 .trains-menu-pagination__item-link,
 .trains-menu-pagination__next-item-link,
 .trains-menu-pagination__previus-item-link {
   width: 83px;
   height: 75px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 35px;
-
   color: #928f94;
   border: 2px solid #c4c4c4;
   border-radius: 5px;
 }
-li.trains-menu-pagination__item:nth-child(2) > a {
+
+.trains-menu-pagination__item:nth-child(2) > a {
   background: #ffa800;
   color: #fff;
 }
+
 .trains-menu-pagination__next-item-link {
-  background-image: url(../../../img/selectionTrain/icon_paginate_arrow.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../../../img/selectionTrain/icon_paginate_arrow.svg) center no-repeat;
 }
+
 .trains-menu-pagination__previus-item-link {
-  background-image: url(../../../img/selectionTrain/icon_paginate_arrow.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../../../img/selectionTrain/icon_paginate_arrow.svg) center no-repeat;
   transform: rotate(180deg);
 }
+
 .trains-menu-pagination__item-link:focus {
   background: #fff;
   outline: none;
   box-shadow: none;
   border: 2px solid #ffa800;
 }
+
 .trains-menu-pagination__item-link:hover {
   background: inherit;
   color: #ffa800;

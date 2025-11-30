@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FormSubscribe } from "../Forms/Forms";
-import ic_phone from "../../img/footer/ic_phone.svg";
-import ic_email from "../../img/footer/ic_email.svg";
-import ic_skype from "../../img/footer/ic_skype.svg";
+import ic_phone from "../../img/ic_phone.svg";
+import ic_email from "../../img/ic_email.svg";
+import ic_skype from "../../img/ic_skype.svg";
 import icon_geo from "../../img/icon_geo.svg";
 import "./footer.css";
 
