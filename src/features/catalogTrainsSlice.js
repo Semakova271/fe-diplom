@@ -43,6 +43,12 @@ const catalogTrainsSlice = createSlice({
       const { data } = action.payload;
       state.searchData.travelData = data;
     },
+    setReverseData: (state) => {
+      // Меняем местами города "откуда" и "куда"
+      const temp = state.searchData.travelData.from;
+      state.searchData.travelData.from = state.searchData.travelData.to;
+      state.searchData.travelData.to = temp;
+    },
     setParameters: (state, action) => {
       const { sort, limit, offset } = action.payload;
 
@@ -127,6 +133,7 @@ export const {
   setDataWagons,
   setTrainsParameters,
   upDateCatalog,
+  setReverseData, 
 } = catalogTrainsSlice.actions;
 
 export default catalogTrainsSlice.reducer;

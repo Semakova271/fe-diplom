@@ -30,14 +30,12 @@ button.react-datepicker__navigation {
 }
 .react-datepicker__month-container {
   width: 352px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
-
 .react-datepicker__header {
   padding-top: 20px;
 }
@@ -58,14 +56,12 @@ button.react-datepicker__navigation {
   font-size: 18px;
   margin: 0.16rem;
 }
-
 .sunday_date {
   font-weight: 700;
 }
 .outside_day {
   color: #e5e5e5;
 }
-
 .before_day {
   color: #928f94;
 }

@@ -2,17 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { deletePassenger } from "../../features/passengersSlice";
-import Banner from "../Molecules/Banner";
-import Info from "../Molecules/Info";
-import banner3 from "../../img/banner/banner3.png";
+import Banner from "../commom/Banner";
+import Info from "../commom/Info";
+import banner3 from "../../img/banner3.png";
 import MainForm from "../Forms/MainForm";
-import SideBar from "../SideBar/SideBar";
-import ProgressBar from "../Molecules/ProgressBar";
-import AddPassenger from "../Main/Passengers/AddPassengerBlock";
-import BlockItem from "../Main/Passengers/BlockItem";
-import { Button } from "../Atoms/Atoms";
+import SideBar from "../layout/SideBar/SideBar";
+import ProgressBar from "../commom/ProgressBar";
+import AddPassenger from "../modules/Passengers/AddPassengerBlock";
+import BlockItem from "../modules/Passengers/BlockItem";
+import { Button } from "../commom/Button";
 import { validatePass } from "../../utils/formsValidator";
-import "../Main/Passengers/passengersInfo.css";
+import "../pages/passengersInfo.css";
 
 const PassengersInfo = () => {
   const { totalCount, passengers } = useSelector((state) => state.passengers);

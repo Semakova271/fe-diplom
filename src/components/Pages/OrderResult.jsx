@@ -1,19 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Banner from "../Molecules/Banner";
-import ControlBlockFeedBack from "../Main/OrderResult/ControlBlockFeedBack";
-import banner_order_page from "../../img/banner/banner_order_page.png";
-import { Title} from "../Atoms/Atoms";
-import Card from "../Main/CardsBlock/Card";
+import Banner from "../commom/Banner";
+import ControlBlockFeedBack from "../modules/OrderResult/ControlBlockFeedBack";
+import banner_order_page from "../../img/banner_order_page.png";
+import { Title} from "../../components/commom/Button";
+import Card from "../../components/modules/CardsBlock/Card";
 import {
   CardTop,
   CardBody,
   CardBottom,
-} from "../Main/CardsBlock/CardsMolecules";
-import Puncts from "../Main/OrderResult/Puncts";
-import Appeal from "../Main/OrderResult/Appeal";
+} from "../modules/CardsBlock/CardComponents";
+import Puncts from "../modules/OrderResult/Puncts";
+import Appeal from "../modules/OrderResult/Appeal";
 //import {useAddOrderMutation} from "../../features/otherApi";
-import "../Main/OrderResult/orderResult.css";
+import "../modules/OrderResult/orderResult.css";
 
 const OrderResult = () => {
   const { first_name, patronymic } = useSelector(

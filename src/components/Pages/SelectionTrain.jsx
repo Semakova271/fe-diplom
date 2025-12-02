@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import Banner from "../Molecules/Banner";
-import banner3 from "../../img/banner/banner3.png";
+import Banner from "../commom/Banner";
+import banner3 from "../../img/banner3.png";
 import MainForm from "../Forms/MainForm";
-import SideBar from "../SideBar/SideBar";
-import ProgressBar from "../Molecules/ProgressBar";
-import Loader from "../Molecules/Loader";
-import SearchControls from "../Main/SelectionTrain/SearchControls";
-import PaginatedItems from "../Molecules/ReactPaginate";
+import SideBar from "../../components/layout/SideBar/SideBar";
+import ProgressBar from "../commom/ProgressBar";
+import Loader from "../commom/Loader";
+import SearchControls from "../modules/SelectionTrain/SearchFilters";
+import PaginatedItems from "../commom/ReactPaginate";
 import {
   setParameters,
   upDateCatalog,
 } from "../../features/catalogTrainsSlice";
-import Info from "../Molecules/Info";
+import Info from "../commom/Info";
 import { useGetTrainsListQuery } from "../../features/myApi";
-import "../Main/SelectionTrain/selectionTrain.css";
+import "../modules/SelectionTrain/TrainSearch.css";
 import {
   parsedUrlString,
   getUrlSearch,

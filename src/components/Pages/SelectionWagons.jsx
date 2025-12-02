@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { Button, Title } from "../Atoms/Atoms";
-import Banner from "../Molecules/Banner";
-import banner3 from "../../img/banner/banner3.png";
+import { Button, Title } from "../commom/Button";
+import Banner from "../commom/Banner";
+import banner3 from "../../img/banner3.png";
 import MainForm from "../Forms/MainForm";
-import SideBar from "../SideBar/SideBar";
-import ProgressBar from "../Molecules/ProgressBar";
-import Loader from "../Molecules/Loader";
-import TrailDetails from "../Main/SelectionWagons/TrailDetails";
-import QuantityTickets from "../Main/SelectionWagons/QuantityTickets";
-import WagonsTypesBlock from "../Main/SelectionWagons/WagonsTypesBlock";
-import SeatsDetails from "../Main/SelectionWagons/SeatsDetails";
-import Info from "../Molecules/Info";
+import SideBar from "../layout/SideBar/SideBar";
+import ProgressBar from "../commom/ProgressBar";
+import Loader from "../commom/Loader";
+import TrailDetails from "../modules/SelectionWagons/TrailDetails";
+import QuantityTickets from "../modules/SelectionWagons/TicketCounter";
+import WagonsTypesBlock from "../modules/SelectionWagons/WagonsTypesBlock";
+import SeatsDetails from "../modules/SelectionWagons/SeatSelection";
+import Info from "../commom/Info";
 import { findWagon } from "../../utils/trainSelectionUtils";
 import { getValidDataPass } from "../../utils/WagonSelectionUtils";
 import { addSeats, setDataPassengers } from "../../features/passengersSlice";
@@ -31,7 +31,7 @@ import {
   parsedUrlString,
   formattedFormData,
 } from "../../utils/trainSelectionUtils";
-import "../Main/SelectionWagons/selectionWagons.css";
+import "../modules/SelectionWagons/WagonSelection.css";
 
 const SelectionWagons = () => {
   const params = useParams();

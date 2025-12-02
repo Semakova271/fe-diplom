@@ -1,10 +1,10 @@
 import React from "react";
-import MainForm from "../Forms/MainForm";
-import About from "../Main/About";
-import HowItWorks from "../Main/HowItWorks";
-import FeedBack from "../Main/FeedBack";
-import Banner from "../Molecules/Banner";
-import banner1 from "../../img/banner/banner1.png";
+import MainForm from "../forms/MainForm";
+import About from "../modules/Home/About";
+import HowItWorks from "../modules/Home/HowItWorks";
+import FeedBack from "../modules/Home/FeedBack";
+import Banner from "../commom/Banner";
+import banner1 from "../../img/banner1.png";
 
 const HomePage = () => {
   return (

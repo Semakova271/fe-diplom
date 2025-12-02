@@ -1,18 +1,18 @@
 import React, { useEffect, useCallback } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Button } from "../Atoms/Atoms";
-import Banner from "../Molecules/Banner";
-import banner3 from "../../img/banner/banner3.png";
+import { Button } from "../commom/Button";
+import Banner from "../commom//Banner";
+import banner3 from "../../img/banner3.png";
 import MainForm from "../Forms/MainForm";
-import SideBar from "../SideBar/SideBar";
-import ProgressBar from "../Molecules/ProgressBar";
-import ScreenTrain from "../Main/Screening/ScreenTrain";
-import ScreenPassengers from "../Main/Screening/ScreenPassengers";
-import ScreenPayment from "../Main/Screening/ScreenPayment";
+import SideBar from "../layout/SideBar/SideBar";
+import ProgressBar from "../commom//ProgressBar";
+import ScreenTrain from "../modules/Screening/ScreenTrain";
+import ScreenPassengers from "../modules/Screening/ScreenPassengers";
+import ScreenPayment from "../modules/Screening/ScreenPayment";
 import { validateDataPassengers } from "../../utils/formsValidator";
 import { useAddOrderMutation } from "../../features/otherApi";
-import "../Main/Screening/screening.css";
+import "../modules/Screening/screening.css";
 
 const Screening = () => {
   const { passengers, contributor } = useSelector((state) => state.passengers);

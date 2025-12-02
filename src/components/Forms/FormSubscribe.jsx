@@ -5,7 +5,6 @@ import { addSubscriber } from "../../features/passengersSlice";
 
 const FormSubscribe = () => {
   const inputRef = useRef();
-
   const dispatch = useDispatch();
 
   const clickHandler = (event) => {
@@ -25,26 +24,25 @@ const FormSubscribe = () => {
       ? event.target.value
       : null;
   };
+  
   return (
-    <React.Fragment>
-      <div className="form-row form-subscribe">
-        <input
-          ref={inputRef}
-          type="text"
-          className="form-control subscribe__input"
-          id="exampleInputSubscribe"
-          aria-describedby="fromSubscribe"
-          placeholder="e-mail"
-          onChange={changeHandler}
-        />
-        <button
-          className="btn btn-transparent subscribe__btn"
-          onClick={clickHandler}
-        >
-          Отправить
-        </button>
-      </div>
-    </React.Fragment>
+    <div className="form-row form-subscribe">
+      <input
+        ref={inputRef}
+        type="text"
+        className="form-control subscribe__input"
+        id="exampleInputSubscribe"
+        aria-describedby="fromSubscribe"
+        placeholder="e-mail"
+        onChange={changeHandler}
+      />
+      <button
+        className="btn btn-transparent subscribe__btn"
+        onClick={clickHandler}
+      >
+        ���������
+      </button>
+    </div>
   );
 };
 

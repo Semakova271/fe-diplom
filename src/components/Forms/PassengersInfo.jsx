@@ -1,23 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 import PassengersLableState from "./PassengersLableState";
 import ControlledCheckbox from "../iu/MUI/ControlledCheckbox";
 import ControlledInput from "../iu/MUI/ControlledInput";
 
-const FormPassengersInfo = () => {
-  const [gender, setGender] = useState({ id: "male" });
-  const [age, setAge] = useState("Взрослый");
-  const [dateBirth, setDateBirth] = useState("");
-  const [name, setName] = useState("");
-  const [secondName, setSecondName] = useState("");
-  const [surName, setSurName] = useState("");
-
+const PassengersInfo = ({ state, setState }) => {
   const clickHandler = (event) => {
-    if (event.target.id === gender.id) {
+    if (event.target.id === state.gender) {
       return;
     }
-    setGender(() =>
-      event.target.id === "male" ? { id: "male" } : { id: "female" }
-    );
+
+    setState((prevState) => ({
+      ...prevState,
+      gender: event.target.id === "male" ? "male" : "female",
+    }));
+  };
+
+  const onChangeInput = (value, id) => {
+    if (id === "last_name")
+      setState((prevState) => ({
+        ...prevState,
+        last_name: value,
+      }));
+    if (id === "first_name")
+      setState((prevState) => ({
+        ...prevState,
+        first_name: value,
+      }));
+    if (id === "patronymic")
+      setState((prevState) => ({
+        ...prevState,
+        patronymic: value,
+      }));
+    if (id === "date_birth")
+      setState((prevState) => ({
+        ...prevState,
+        date_birth: value,
+      }));
+    if (id === "age")
+      setState((prevState) => ({
+        ...prevState,
+        age: value,
+      }));
   };
   
   return (
@@ -25,9 +48,10 @@ const FormPassengersInfo = () => {
       <div className="passengers-data_type">
         <PassengersLableState
           type="age"
-          state={age}
-          setState={setAge}
-          options={["Взрослый", "Детский"]}
+          id="age"
+          setState={onChangeInput}
+          value={state.age}
+          options={["��������", "�������"]}
         />
       </div>
 
@@ -37,12 +61,13 @@ const FormPassengersInfo = () => {
             htmlFor="exampleFormControlInput1"
             className="passengers-data_fullname_label"
           >
-            Фамилия
+            �������
           </label>
           <ControlledInput
+            id="last_name"
             type="text"
-            state={surName}
-            setState={setSurName}
+            state={state.last_name}
+            onChangeInput={onChangeInput}
           />
         </div>
         <div className="form-group group-fullname">
@@ -50,21 +75,27 @@ const FormPassengersInfo = () => {
             htmlFor="exampleFormControlInput2"
             className="passengers-data_fullname_label"
           >
-            Имя
+            ���
           </label>
-          <ControlledInput type="text" state={name} setState={setName} />
+          <ControlledInput
+            id="first_name"
+            type="text"
+            state={state.first_name}
+            onChangeInput={onChangeInput}
+          />
         </div>
         <div className="form-group group-fullname">
           <label
             htmlFor="exampleFormControlInput3"
             className="passengers-data_fullname_label"
           >
-            Отчество
+            ��������
           </label>
           <ControlledInput
+            id="patronymic"
             type="text"
-            state={secondName}
-            setState={setSecondName}
+            state={state.patronymic}
+            onChangeInput={onChangeInput}
           />
         </div>
       </div>
@@ -74,7 +105,7 @@ const FormPassengersInfo = () => {
             htmlFor="exampleFormControlInput1"
             className="passengers-data_gender_label"
           >
-            Пол
+            ���
           </label>
           <div
             className="btn-group"
@@ -85,7 +116,7 @@ const FormPassengersInfo = () => {
               id="male"
               type="button"
               className={
-                gender.id === "male"
+                state.gender === "male"
                   ? "btn btn-gender gender-active"
                   : "btn btn-gender"
               }
@@ -98,13 +129,13 @@ const FormPassengersInfo = () => {
               id="female"
               type="button"
               className={
-                gender.id === "female"
+                state.gender === "female"
                   ? "btn btn-gender gender-active"
                   : "btn btn-gender"
               }
               onClick={clickHandler}
             >
-              Ж
+              �
             </button>
           </div>
         </div>
@@ -113,23 +144,24 @@ const FormPassengersInfo = () => {
             htmlFor="exampleFormControlInput5"
             className="passengers-data_birthdate_label"
           >
-            Дата рождения
+            ���� ��������
           </label>
           <ControlledInput
+            id="date_birth"
             type="date"
-            state={dateBirth}
-            setState={setDateBirth}
+            state={state.date_birth}
+            onChangeInput={onChangeInput}
           />
         </div>
       </div>
       <div className="passengers-data_disabled-person">
         <ControlledCheckbox />
         <span className="passengers-data_disabled-person_text">
-          Ограниченная подвижность
+          ������������ �����������
         </span>
       </div>
     </div>
   );
 };
 
-export default FormPassengersInfo;
+export default PassengersInfo;
