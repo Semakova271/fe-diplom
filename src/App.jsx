@@ -23,10 +23,9 @@ function App() {
           <Route path="passengers/:id/" element={<PassengersInfo />} />
           <Route path="personal_information/:id/" element={<PersonalData />} />
           <Route path="screening/:id/" element={<Screening />} />
-          <Route path="order-result/:id/" element={<OrderResult/>} />
+          <Route path="order-result/:id/" element={<OrderResult />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-      
       </Routes>
     </BrowserRouter>
   );
