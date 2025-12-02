@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/layout/Layout";
-import HomePage from "src/components/pages/HomePage";
+import HomePage from "./components/pages/HomePage";
 import SelectionTrain from "./components/pages/SelectionTrain";
 import SelectionWagons from "./components/pages/SelectionWagons";
 import PassengersInfo from "./components/pages/PassengersInfo";
