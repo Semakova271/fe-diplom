@@ -1,17 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 
-// Создаем компоненты прямо в App.jsx
-const Layout = ({ children }) => <div>{children}</div>;
-const HomePage = () => <div>Home Page</div>;
-const TrainsPage = () => <div>Trains Page</div>;
-const SelectionWagons = () => <div>Selection Wagons</div>;
-const PassengersInfo = () => <div>Passengers Info</div>;
-const PersonalData = () => <div>Personal Data</div>;
-const Screening = () => <div>Screening</div>;
-const OrderResult = () => <div>Order Result</div>;
-const NotFound = () => <div>404 - Not Found</div>;
+import Layout from "@/components/layout/Layout.jsx";
+import HomePage from "@/components/layout/Home/HomePage.jsx";
+import TrainsPage from "@/components/pages/TrainsPage.jsx";
+import SelectionWagons from "@/components/pages/SelectionWagons.jsx";
+import PassengersInfo from "@/components/pages/PassengersInfo.jsx";
+import PersonalData from "@/components/pages/PersonalData.jsx";
+import Screening from "@/components/pages/Screening.jsx";
+import OrderResult from "@/components/modules/OrderResult/OrderResult.jsx";
+import NotFound from "@/components/pages/NotFound.jsx";
+import "@/App.css";
 
 function App() {
   return (
