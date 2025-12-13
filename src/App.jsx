@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Layout from "@/components/layout/Layout.jsx";
-import HomePage from "@/components/layout/Home/HomePage.jsx";
-import TrainsPage from "@/components/pages/TrainsPage.jsx";
-import SelectionWagons from "@/components/pages/SelectionWagons.jsx";
-import PassengersInfo from "@/components/pages/PassengersInfo.jsx";
-import PersonalData from "@/components/pages/PersonalData.jsx";
-import Screening from "@/components/pages/Screening.jsx";
-import OrderResult from "@/components/modules/OrderResult/OrderResult.jsx";
-import NotFound from "@/components/pages/NotFound.jsx";
-import "@/App.css";
+// Все компоненты в одном файле
+const Layout = ({ children }) => <div className="layout">{children}</div>;
+const HomePage = () => <div className="home">Home Page</div>;
+const TrainsPage = () => <div className="trains">Trains Page</div>;
+const SelectionWagons = () => <div className="wagons">Selection Wagons</div>;
+const PassengersInfo = () => <div className="passengers">Passengers Info</div>;
+const PersonalData = () => <div className="personal">Personal Data</div>;
+const Screening = () => <div className="screening">Screening</div>;
+const OrderResult = () => <div className="order">Order Result</div>;
+const NotFound = () => <div className="not-found">404 - Page Not Found</div>;
 
 function App() {
   return (
