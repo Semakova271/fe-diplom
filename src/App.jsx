@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "/src/components/layout/Layout.jsx";
 import HomePage from "/src/components/layout/Home/HomePage.jsx";
-import TrainsPage from "/src/components/pages/TrainsPage.jsx";
+import TrainsPage from "../src/components/pages/TrainsPage";
 import SelectionWagons from "/src/components/pages/SelectionWagons.jsx";
 import PassengersInfo from "/src/components/pages/PassengersInfo.jsx";
 import PersonalData from "/src/components/pages/PersonalData.jsx";
