@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { useNavigate,useLocation, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setContributor } from "../../features/passengersSlice";
-import Banner from "../commom/Banner";
+import Banner from "../common/Banner";
 import banner3 from "../../img/banner3.png";
-import MainForm from "../Forms/MainForm";
-import ProgressBar from "../commom/ProgressBar";
-import Info from "../commom/Info";
+//import MainForm from "../Forms/MainForm";
+import ProgressBar from "../common/ProgressBar";
+import Info from "../common/Info";
 import SideBar from "../layout/SideBar/SideBar";
-import PersonalDataForm from "../Forms/PersonalDataForm";
+import PersonalInfoForm from "../Forms/PersonalInfoForm";
 import ControlledCheckbox from "../iu/MUI/ControlledCheckbox";
-import { CardTitle, Button } from "../commom/Button";
+import { CardTitle, Button } from "../common/Button";
 import "../pages/personalData.css";
 import { validateDataPassengers } from "../../utils/formsValidator";
 import { optionsPayment } from "../../utils/dataText";
@@ -82,7 +82,7 @@ const PersonalData = () => {
                       className="personal-data_block"
                     />
                   </div>
-                  <PersonalDataForm data={state} onChange={onChangeInput} />
+                  <PersonalInfoForm data={state} onChange={onChangeInput} />
                 </div>
 
                 <div className="personal-data_payment">

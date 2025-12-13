@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Button } from "../../commom/Button";
+import { Button } from "../../common/Button";
 import Wagon from "../../modules/SelectionWagons/WagonsTypesBlock";
-import WagonThirdClass from "./WagonThirdClass";
-import WagonFourthClass from "./WagonFourthClass";
-import WagonFirstClass from "./WagonFirstClass";
-import WagonSecondClass from "./WagonSecondClass";
+import WagonThirdClass from "./components/WagonThirdClass";
+import WagonFourthClass from "./components/WagonFourthClass";
+import WagonFirstClass from "./components/WagonFirstClass";
+import WagonSecondClass from "./components/WagonSecondClass";
 import { getArrWagons } from "../../../utils/WagonSelectionUtils";
 import { nanoid } from "nanoid";
 const SeatsDetails = ({ className, data, selectedTypeTicket, onClick }) => {

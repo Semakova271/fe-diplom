@@ -1,13 +1,13 @@
 import React from "react";
 import TimingBlock from "../../modules/SelectionWagons/TicketCounter";
 import TrainInfo from "../../modules/SelectionWagons/TrailDetails";
-import { MySvgIcon } from "../../commom/Button";
+import { MySvgIcon } from "../../common/Button";
 import { capitalizeFirstLetter } from "../../../utils/trainSelectionUtils";
 import { format} from "date-fns";
 import { nanoid } from "nanoid";
-import icon_clock from "../../../img/icon_clock.svg";
-import icon_yellow_train from "../../../img/icon_yellow-train.svg";
-import icon_yellow_arrow_right from "../../../img/icon_yellow-arrow-right.svg";
+import icon_clock from "../../../img/ic_clock.svg";
+import icon_yellow_train from "../../../img/ic_yellow-train.svg";
+import icon_yellow_arrow_right from "../../../img/ic_yellow-arrow-right.svg";
 
 export const CardTop = ({ className, data, icon, children }) => {
 

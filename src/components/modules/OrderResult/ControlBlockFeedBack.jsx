@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Title, Button } from "../../commom/Button";
+import { Title, Button } from "../../common/Button";
 
 const ControlBlockFeedBack = ({ amount }) => {
   const navigate = useNavigate();

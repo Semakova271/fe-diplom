@@ -1,6 +1,6 @@
 import React from "react";
 import {  useNavigate } from "react-router-dom";
-import { Button } from "../../components/commom/Button";
+import { Button } from "../../components/common/Button";
 import { nanoid } from "nanoid";
 const NotFound = () => {
   const navigate = useNavigate();

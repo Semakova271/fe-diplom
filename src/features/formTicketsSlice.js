@@ -12,27 +12,37 @@ const formSlice = createSlice({
       window.location.search === ""
         ? {
             status: false,
-            from: { date: null, city: { _id: "", name: null } },
-            to: { date: null, city: { _id: "", name: null } },
+            from: { 
+              date: null, 
+              city: { _id: "", name: "" } // name тоже должно быть строкой
+            },
+            to: { 
+              date: null, 
+              city: { _id: "", name: "" }
+            },
           }
         : {
             status: false,
             from: {
-              date: search.date_start,
-              city: { _id: search.from_city_id, name: search.from_city_name },
+              date: search.date_start || null,
+              city: { 
+                _id: search.from_city_id || "", 
+                name: search.from_city_name || "" 
+              },
             },
             to: {
               date: search.date_end ? search.date_end : null,
-              city: { _id: search.to_city_id, name: search.to_city_name },
+              city: { 
+                _id: search.to_city_id || "", 
+                name: search.to_city_name || "" 
+              },
             },
           },
-  } ,
+  },
   reducers: {
     inputValue: (state, action) => {
       const { name } = action.payload;
-
-      const value = state.name === name ? state.name : name;
-      state.name = value;
+      state.name = name;
     },
     setForm: (state, action) => {
       const { type, data, status } = action.payload;
@@ -45,15 +55,17 @@ const formSlice = createSlice({
     setReverseData: (state) => {
       const startCity = state.formData.to.city;
       const finishCity = state.formData.from.city;
+      const startDate = state.formData.to.date;
+      const finishDate = state.formData.from.date;
+      
       state.formData.from.city = startCity;
       state.formData.to.city = finishCity;
+      state.formData.from.date = startDate;
+      state.formData.to.date = finishDate;
     },
     upDateForm: (state, action) => {
-      //
       const { data } = action.payload;
       state.formData = data;
-      // console.log(data, 'slice')
-      if (!data.to.date) state.formData.to.date = null;
     },
   },
 });

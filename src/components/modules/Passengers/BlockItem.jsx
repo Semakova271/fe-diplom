@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Title } from "../../commom/Button";
-import PassengersForm from "../../forms/PassengersForm";
+import { Button, Title } from "../../common/Button";
+import PassengersForm from "../../forms/PassengerForm";
 
 const BlockItem = React.forwardRef(
   ({ id, clickHandler, clickDelete, showInfo }, ref) => {

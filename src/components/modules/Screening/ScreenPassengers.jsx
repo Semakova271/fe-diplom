@@ -1,10 +1,10 @@
 import React from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { CardTitle, Button, MySvgIcon } from "../../commom/Button";
+import { CardTitle, Button, MySvgIcon } from "../../common/Button";
 import Card from "../CardsBlock/Card";
 import { CardTop, CardBody } from "../CardsBlock/CardComponents";
-import icon_avatar from "../../../img/icon_avatar.svg";
+import icon_avatar from "../../../img/ic_avatar.svg";
 import { formattedPrice } from "../../../utils/trainSelectionUtils";
 import { format } from "date-fns";
 import { nanoid } from "nanoid";

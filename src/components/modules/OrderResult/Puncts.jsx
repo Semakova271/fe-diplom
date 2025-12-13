@@ -1,10 +1,10 @@
 import React from "react";
-import {MySvgIcon } from "../../commom/Button";
+import {MySvgIcon } from "../../common/Button";
 import Card from "../CardsBlock/Card";
 import { CardTop, CardBody } from "../CardsBlock/CardComponents";
-import icon_comp from "../../../img/icon_comp.svg";
-import icon_tickets from "../../../img/icon_tickets.svg";
-import icon_driver from "../../../img/icon_driver.svg";
+import icon_comp from "../../../img/ic_comp.svg";
+import icon_tickets from "../../../img/ic_tickets.svg";
+import icon_driver from "../../../img/ic_driver.svg";
 
 const Puncts = () => {
     return (

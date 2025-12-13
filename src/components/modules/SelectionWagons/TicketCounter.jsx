@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { CardTitle } from "../../commom/Button";
-import Tooltip from "../../commom/Tooltip";
+import { CardTitle } from "../../common/Button";
+import Tooltip from "../../common/Tooltip";
 import { templateText } from "../../../utils/dataText";
 import { setTicketNoSeats } from "../../../features/passengersSlice";
 import { nanoid } from "nanoid";

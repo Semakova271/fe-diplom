@@ -1,0 +1,87 @@
+src/
++-- components/
+¦   +-- layout/
+¦   ¦   +-- Header/
+¦   ¦   ¦   +-- Header.jsx
+¦   ¦   ¦   L-- Header.css
+¦   ¦   +-- Footer/
+¦   ¦   ¦   +-- Footer.jsx
+¦   ¦   ¦   L-- Footer.css
+¦   ¦   +-- SideBar/
+¦   ¦   ¦   +-- SideBar.jsx
+¦   ¦   ¦   +-- SideBar.css
+¦   ¦   ¦   +-- AssistantBlock.jsx
+¦   ¦   ¦   +-- CustomSlider.jsx
+¦   ¦   ¦   L-- QuantityPassBlock.jsx
+¦   ¦   +-- main.css
+¦   ¦   +-- Main.jsx
+¦   ¦   L-- Layout.jsx
+¦   +-- common/
+¦   ¦   +-- Button.jsx
+¦   ¦   +-- Modal.jsx
+¦   ¦   +-- Calendar.jsx
+¦   ¦   +-- Loader.jsx
+¦   ¦   +-- ProgressBar.jsx
+¦   ¦   L-- Review.jsx
+¦   +-- forms/
+¦   ¦   +-- MainForm.jsx
+¦   ¦   +-- PassengerForm.jsx
+¦   ¦   +-- PassengersInfoForm.jsx
+¦   ¦   +-- PersonalInfoForm.jsx
+¦   ¦   L-- Form.css
+¦   +-- modules/
+¦   ¦   +-- Home/
+¦   ¦   ¦   +-- About.jsx
+¦   ¦   ¦   +-- HowItWorks.jsx
+¦   ¦   ¦   +-- Contacts.js
+¦   ¦   ¦   L-- FeedBack.jsx
+¦   ¦   +-- CardsBlock/
+¦   ¦   ¦   +-- Card.jsx
+¦   ¦   ¦   L-- CardComponents.jsx
+¦   ¦   +-- Passengers/
+¦   ¦   ¦   +-- PassengersInfo.jsx
+¦   ¦   ¦   +-- PassengersDocs.jsx
+¦   ¦   ¦   +-- BlockItem.jsx
+¦   ¦   ¦   L-- AddPassengerBlock.jsx
+¦   ¦   +-- Screening/
+¦   ¦   ¦   +-- ScreenPassengers.jsx
+¦   ¦   ¦   +-- Screening.css
+¦   ¦   ¦   +-- ScreenPayment.jsx
+¦   ¦   ¦   L-- ScreenTrain.jsx
+¦   ¦   +-- SelectionTrain/
+¦   ¦   ¦   +-- TrainSearch.css
+¦   ¦   ¦   +-- TrainsMenuCard.jsx
+¦   ¦   ¦   +-- SearchFilters.jsx
+¦   ¦   ¦   L-- TrainPagination.jsx
+¦   ¦   +-- SelectionWagons/
+¦   ¦   ¦   +-- WagonSelection.css
+¦   ¦   ¦   +-- WagonsTypesBlock.jsx
+¦   ¦   ¦   +-- SeatSelection.jsx
+¦   ¦   ¦   +-- WagonFirstClass.jsx
+¦   ¦   ¦   +-- WagonSecondClass.jsx
+¦   ¦   ¦   L-- TicketCounter.jsx
+¦   ¦   L-- OrderResult/
+¦   ¦       +-- OrderResult.jsx
+¦   ¦       +-- OrderResult.css
+¦   ¦       +-- Puncts.jsx
+¦   ¦       L-- ControlBlockFeedBack.jsx
+¦   +-- pages/
+¦   ¦   +-- HomePage.jsx
+¦   ¦   +-- PersonalData.jsx
+¦   ¦   +-- SelectionTrain.jsx
+¦   ¦   +-- SelectionWagons.jsx
+¦   ¦   +-- PassengersInfo.jsx
+¦   ¦   +-- Screening.jsx
+¦   ¦   L-- NotFound.jsx
+¦   L-- ui/
+¦       +-- ControlledInput.jsx
+¦       +-- ControlledCheckbox.jsx
+¦       +-- CustomSwitch.jsx
+¦       L-- ControllableStates.jsx
++-- store/
++-- hooks/
++-- utils/
++-- img/
++-- App.css
++-- App.jsx
+L-- index.jsx

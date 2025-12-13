@@ -1,12 +1,12 @@
 import React, { useEffect, useCallback } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Button } from "../commom/Button";
-import Banner from "../commom//Banner";
+import { Button } from "../common/Button";
+import Banner from "../common//Banner";
 import banner3 from "../../img/banner3.png";
-import MainForm from "../Forms/MainForm";
+//import MainForm from "../Forms/MainForm";
 import SideBar from "../layout/SideBar/SideBar";
-import ProgressBar from "../commom//ProgressBar";
+import ProgressBar from "../common//ProgressBar";
 import ScreenTrain from "../modules/Screening/ScreenTrain";
 import ScreenPassengers from "../modules/Screening/ScreenPassengers";
 import ScreenPayment from "../modules/Screening/ScreenPayment";

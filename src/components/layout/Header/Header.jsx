@@ -1,24 +1,67 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Logo from "./Logo";
+import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./header.css";
-import { nanoid } from "nanoid";
 
 const Header = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/fe-diplom" || 
+                     location.pathname === "/fe-diplom/" || 
+                     location.pathname === "/";
+
+  // Функция для плавной прокрутки
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -100; // Отступ для хедера
+    window.scrollTo({ 
+      top: yCoordinate + yOffset, 
+      behavior: 'smooth' 
+    });
+  };
 
   return (
-    <React.Fragment>
-      <header className="container-fluid header">
-        <div className="row">
-          <div className="col col-md">
-            <div className="header-top">
-              <Logo key={nanoid()} />
-            </div>
-            <NavBar key={nanoid()} />
-          </div>
+    <header className="header">
+      {/* Первая строка: Лого */}
+      <div className="logo-row">
+        <Link to="/fe-diplom" className="main-logo">
+          Лого
+        </Link>
+      </div>
+
+      {/* Вторая строка: Навигация в черной полосе */}
+      <div className="nav-row">
+        <div className="nav-container">
+          <HashLink 
+            to={isHomePage ? "#about" : "/fe-diplom#about"}
+            className="nav-item"
+            scroll={scrollWithOffset}
+          >
+            О нас
+          </HashLink>
+          <HashLink 
+            to={isHomePage ? "#howItWorks" : "/fe-diplom#howItWorks"}
+            className="nav-item"
+            scroll={scrollWithOffset}
+          >
+            Как это работает
+          </HashLink>
+          <HashLink 
+            to={isHomePage ? "#feedback" : "/fe-diplom#feedback"}
+            className="nav-item"
+            scroll={scrollWithOffset}
+          >
+            Отзывы
+          </HashLink>
+          <HashLink 
+            to="#footer"
+            className="nav-item"
+            scroll={scrollWithOffset}
+          >
+            Контакты
+          </HashLink>
         </div>
-      </header>
-    </React.Fragment>
+      </div>
+    </header>
   );
 };
 

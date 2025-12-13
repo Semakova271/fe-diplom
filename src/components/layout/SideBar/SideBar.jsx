@@ -2,8 +2,8 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 
 import AssistantBlock from "./AssistantBlock";
-import OrderDetails from "./OrderDetails";
-import LastTickets from "./LastTickets";
+import OrderDetails from "../../modules/OrderResult/OrderDetails";
+import LastTickets from "../../modules/SelectionTrain/components/LastTickets";
 import { useGetLastTicketsQuery } from "../../../features/myApi";
 import "./sidebar.css";
 

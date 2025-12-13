@@ -1,14 +1,14 @@
 import React from "react";
-import AvailableWagons from "./WagonTypes";
+import AvailableWagons from "../SelectionTrain/components/WagonTypes";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import Card from "../CardsBlock/Card";
 import { CardTop, CardBody, CardBottom } from "../CardsBlock/CardComponents";
-import CardIconsBlock from "./TrainIconsBlock";
-import { Button, MySvgIcon } from "../../commom/Button";
+import CardIconsBlock from "../SelectionTrain/components/TrainIconsBlock";
+import { Button, MySvgIcon } from "../../common/Button";
 import TrainInfo from "../../modules/SelectionWagons/TrailDetails";
 import TrailsData from "../../modules/SelectionTrain/TrainsMenu";
-import icon_train from "../../../img/icon_train.svg";
-import icon_yellow_arrow_right from "../../../img/icon_yellow-arrow-right.svg";
+import icon_train from "../../../img/ic_train.svg";
+import icon_yellow_arrow_right from "../../../img/ic_yellow-arrow-right.svg";
 import { nanoid } from "nanoid";
 
 const TrainsMenuCard = ({ departure, onClick }) => {

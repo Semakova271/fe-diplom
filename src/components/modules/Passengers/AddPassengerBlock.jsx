@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Button } from "../../commom/Button";
+import { Title, Button } from "../../common/Button";
 
 const AddPassenger = ({ state, setState }) => {
   

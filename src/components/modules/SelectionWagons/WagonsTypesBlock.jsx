@@ -1,5 +1,5 @@
 import React from "react";
-import { CardTitle, Button } from "../../commom/Button";
+import { CardTitle, Button } from "../../common/Button";
 
 const WagonsTypesBlock = ({ className, selectedType, setSelectedType }) => {
 

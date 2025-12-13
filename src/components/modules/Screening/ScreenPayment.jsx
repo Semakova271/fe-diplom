@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { Title, Button } from "../../commom/Button";
+import { Title, Button } from "../../common/Button";
 
 const ScreenPayment = ({ data }) => {
   const navigate = useNavigate();

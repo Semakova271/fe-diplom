@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button, MySvgIcon, CardTitle } from "../../commom/Button";
+import { Button, MySvgIcon, CardTitle } from "../../common/Button";
 import { getDataPassTemplate } from "../../../utils/WagonSelectionUtils";
 import { formattedPrice } from "../../../utils/trainSelectionUtils";
-import icon_pass_yellow from "../../../img/icon_pass_yellow.svg";
+import icon_pass_yellow from "../../../img/ic_pass_yellow.svg";
 import { nanoid } from "nanoid";
 const QuantityPassBlock = ({ data }) => {
   const [showPassengers, setShowPassengers] = useState(true);

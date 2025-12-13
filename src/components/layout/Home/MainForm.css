@@ -1,0 +1,209 @@
+/* MainForm.css - Обновлённая версия */
+
+.mainForm {
+  width: 729px;
+  height: 574px;
+  background: rgba(41, 41, 41, 0.8);
+  padding: 0 24px;
+  z-index: 100;
+  /* Убрано абсолютное позиционирование */
+}
+
+/* Направление */
+.mainForm .destination {
+  margin-top: 40px; /* Уменьшено с 79px */
+}
+
+.mainForm .departureTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.mainForm .groupCityName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Поля ввода "Откуда" и "Куда" */
+.mainForm .inputField {
+  width: 325px;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  padding: 0 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
+}
+
+.mainForm .inputField::placeholder {
+  color: #928F94;
+}
+
+.mainForm .inputField:focus {
+  border: 1px solid #FFA800;
+  outline: none;
+}
+
+/* Кнопка переключения */
+.mainForm .reverseButton {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainForm .arrowIcon {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%) brightness(200%);
+}
+
+/* Дата */
+.mainForm .dateTrails {
+  margin-top: 40px; /* Уменьшено с 61px */
+}
+
+.mainForm .groupDateTrails {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Календарь */
+.mainForm .calendar {
+  width: 325px;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  padding: 0 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #292929;
+}
+
+.mainForm .calendar::placeholder {
+  color: #928F94;
+}
+
+.mainForm .calendar:focus {
+  border: 1px solid #FFA800;
+  outline: none;
+}
+
+/* Кнопка "НАЙТИ БИЛЕТЫ" */
+.mainForm .control {
+  margin-top: 40px; /* Уменьшено с 92px */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button_main_form {
+  width: 323px;
+  height: 60px;
+  background: #FFA800;
+  border: none;
+  border-radius: 5px;
+  
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button_main_form:hover:not(:disabled) {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #FFB524;
+}
+
+.button_main_form:active:not(:disabled) {
+  border: 1px solid #FFA800;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #FFFFFF;
+  color: #FFA800;
+}
+
+.button_main_form:disabled {
+  background: #928F94;
+  color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 1330px) {
+  .mainForm {
+    width: 90%;
+    max-width: 729px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainForm {
+    width: 95%;
+    padding: 20px;
+    height: auto;
+  }
+  
+  .mainForm .groupCityName,
+  .mainForm .groupDateTrails {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .mainForm .inputField,
+  .mainForm .calendar {
+    width: 100%;
+    max-width: 325px;
+  }
+  
+  .mainForm .reverseButton {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  
+  .mainForm .destination {
+    margin-top: 20px;
+  }
+  
+  .mainForm .dateTrails {
+    margin-top: 20px;
+  }
+  
+  .mainForm .control {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .button_main_form {
+    width: 100%;
+    max-width: 323px;
+  }
+}
