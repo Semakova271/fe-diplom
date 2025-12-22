@@ -1,0 +1,70 @@
+/* About.css - полная версия */
+/* Горизонтальная желтая полоса на всю страницу вверху */
+.about__top-line {
+  position: absolute;
+  width: 100vw;
+  height: 9px;
+  left: 0;
+  top: 0;
+  background: #ffa800;
+  z-index: 1;
+}
+
+.about {
+  max-width: 1920px;
+  margin-left: 258px;
+  margin-bottom: 91px;
+  padding: 9rem 29.0625rem 7.1875rem 0.70625rem;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Вертикальная желтая полоса слева от текста */
+.about__content {
+  padding-left: 1.1875rem;
+  padding-bottom: 0.5rem;
+  border-left: 0.5625rem solid #ffa800;
+  position: relative;
+}
+
+.about__title {
+  margin-bottom: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #292929;
+  position: relative;
+}
+
+.about__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 35px;
+  color: #292929;
+  max-width: 1400px;
+}
+
+.about__text:not(:last-child) {
+  margin-bottom: 1.6875rem;
+}
+
+.about__text_bold {
+  font-weight: 700;
+}
+
+@media (max-width: 1830px) {
+  .about {
+    padding-right: 16.0625rem;
+    padding-left: 0.70625rem;
+  }
+}
+
+@media (max-width: 1330px) {
+  .about {
+    padding: 3.125rem;
+    margin-left: 0;
+  }
+}

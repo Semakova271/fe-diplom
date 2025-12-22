@@ -1,0 +1,167 @@
+.passengers-docs_form {
+  padding: 20px;
+  position: relative;
+}
+
+/* Заголовки документа */
+.docs-header-row {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 10px;
+}
+
+.docs-header-row .field-label:first-child {
+  width: 444px;
+}
+
+.docs-header-row .field-label:nth-child(2),
+.docs-header-row .field-label:last-child {
+  width: 205px;
+}
+
+/* Для свидетельства - один заголовок на всю ширину */
+.docs-header-row .field-label:only-child {
+  width: 207px;
+}
+
+/* Поля документа */
+.docs-fields-row {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 10px;
+}
+
+.doc-type-field,
+.passport-seria-field,
+.passport-number-field,
+.certificate-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Тип документа - ширина 444px для свидетельства, 205px для паспорта */
+.doc-type-field {
+  width: 444px;
+}
+
+.doc-type-field.passport-type {
+  width: 205px;
+}
+
+/* Поля для паспорта */
+.passport-seria-field,
+.passport-number-field {
+  width: 205px;
+}
+
+.passport-seria-input,
+.passport-number-input {
+  width: 205px;
+  height: 50px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+
+.passport-seria-input:focus,
+.passport-number-input:focus {
+  outline: none;
+  border-color: #ffa800;
+}
+
+/* Поле для свидетельства */
+.certificate-field {
+  width: 207px;
+}
+
+.certificate-number-input {
+  width: 207px;
+  height: 50px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.certificate-number-input:focus {
+  outline: none;
+  border-color: #ffa800;
+}
+
+.certificate-number-input.error {
+  border-color: #dc3545;
+  background-color: rgba(255, 61, 0, 0.1);
+}
+
+/* Сообщение об ошибке для свидетельства */
+.certificate-error-message {
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 61, 0, 0.38);
+  color: #dc3545;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-error-message::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(255, 61, 0, 0.38);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .passengers-docs_form {
+    padding: 15px;
+  }
+  
+  .docs-header-row,
+  .docs-fields-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .doc-type-field,
+  .docs-header-row .field-label,
+  .passport-seria-field,
+  .passport-number-field,
+  .certificate-field,
+  .passport-seria-input,
+  .passport-number-input,
+  .certificate-number-input {
+    width: 100% !important;
+  }
+  
+  .certificate-error-message {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .certificate-error-message::before {
+    display: none;
+  }
+}

@@ -1,0 +1,75 @@
+/* Общие стили для компонентов пассажиров */
+
+/* Контейнеры форм */
+.passengers-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовки */
+.passengers-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Сообщения об ошибках */
+.passengers-error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.passengers-error::before {
+  content: "⚠";
+  font-size: 12px;
+}
+
+/* Подсказки */
+.passengers-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Состояния полей */
+.passengers-field-valid {
+  border-color: #28a745 !important;
+}
+
+.passengers-field-invalid {
+  border-color: #dc3545 !important;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.passengers-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Медиа запросы для мобильных устройств */
+@media (max-width: 480px) {
+  .passengers-container {
+    padding: 10px;
+  }
+  
+  .passengers-title {
+    font-size: 20px;
+  }
+}

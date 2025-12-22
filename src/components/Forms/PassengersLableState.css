@@ -1,0 +1,14 @@
+.passengers-label-state {
+  width: 100%;
+}
+
+.passengers-label-state .MuiAutocomplete-root {
+  width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .passengers-label-state {
+    width: 100% !important;
+  }
+}

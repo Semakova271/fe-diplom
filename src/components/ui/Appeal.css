@@ -1,0 +1,51 @@
+/* Appeal.css */
+.appeal_wrap {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  margin-left: 205px;
+}
+
+.appeal-text {
+  margin-top: 51px;
+}
+
+.appeal-text:first-child {
+  margin-top: 95px;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.appeal-text:last-child {
+  margin-bottom: 129px;
+}
+
+.strong-text {
+  font-weight: 700;
+}
+
+/* Общие стили для страницы результатов */
+.banner-order-result_page {
+  height: 834px;
+  width: 1920px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+section.order-result_wrap {
+  width: 1404px;
+  height: 1113px;
+  margin: 0 auto;
+  margin-top: -338px;
+  margin-bottom: 175px;
+}
+
+.order-result_block {
+  position: absolute;
+  width: 1404px;
+  height: 1113px;
+  z-index: 4;
+}

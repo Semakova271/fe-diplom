@@ -1,0 +1,113 @@
+.screening-block_passengers {
+  margin-top: 45px;
+}
+
+.screening-block.screening-block_passengers {
+  display: flex;
+  width: 959px;
+}
+
+.screening-block_card-body {
+  display: flex;
+}
+
+.card-desk {
+  width: 678px;
+  padding-top: 30px;
+}
+
+.screening-block_card-body-item_card.card {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  margin-top: 30px;
+}
+
+.screening-block_card-body-item_card:nth-last-child(1) {
+  margin-bottom: 60px;
+}
+
+.screening-block_card-body-item_card.card:not(:last-child) {
+  border-bottom: 1px dashed #e5e5e5;
+}
+
+.card-top.passengers {
+  width: 156px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span.passengers_card-top-text {
+  margin-top: 17px;
+  margin-bottom: 46px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #292929;
+}
+
+.passengers-svgIcon-wrap {
+  width: 68px;
+}
+
+.card-body.passengers {
+  padding: 0;
+}
+
+.passengers_body_group-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 46px;
+}
+
+.passengers_body-text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+  color: #292929;
+}
+
+.passengers_body-text:not(:first-child) {
+  color: #928f94;
+  margin-bottom: 0;
+}
+
+.screening-passengers_control.passengers_card-bottom {
+  width: 281px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-left: 1px dashed #e5e5e5;
+}
+
+.screening-passengers_control_price-block {
+  display: flex;
+  width: 100%;
+  margin-bottom: 28px;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #292929;
+}
+
+.price-block_sum {
+  font-weight: 700;
+}
+
+svg.control_price-block_currency {
+  margin-bottom: 5px;
+  margin-left: 8px;
+}

@@ -1,0 +1,80 @@
+/* Основные стили для календаря */
+.form-calendar {
+  width: 325px;
+  height: 60px;
+  border-radius: 4px;
+  padding: 16px;
+  font: 400 18px/21px 'Roboto', sans-serif;
+}
+
+.sidebar_form.form-calendar {
+  width: 295px;
+  height: 43px;
+}
+
+input.form-calendar:focus {
+  border: 1px solid #ffa800;
+}
+
+/* React Datepicker стили */
+.react-datepicker {
+  margin-left: -15px;
+}
+
+.react-datepicker-popper {
+  z-index: 99;
+}
+
+.react-datepicker__navigation {
+  margin-top: 15px;
+}
+
+.react-datepicker__day-names {
+  display: none;
+}
+
+.react-datepicker__month-container {
+  width: 352px;
+  font: 400 18px/21px 'Roboto', sans-serif;
+}
+
+.react-datepicker__header {
+  padding-top: 20px;
+}
+
+.react-datepicker__current-month {
+  font: 700 24px/21px 'Roboto', sans-serif;
+}
+
+.react-datepicker__day {
+  color: #000;
+  display: inline-block;
+  width: 2.7rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  text-align: center;
+  font-size: 18px;
+  margin: 0.16rem;
+}
+
+.sunday_date {
+  font-weight: 700;
+}
+
+.outside_day {
+  color: #e5e5e5;
+}
+
+.before_day {
+  color: #928f94;
+}
+
+.react-datepicker__day--selected {
+  border: 1px solid #ffa800;
+  background: rgba(255, 168, 0, 0.31);
+}
+
+.react-datepicker__day--selected:hover {
+  border: 1px solid #ffa800;
+  background: #ffa800;
+}

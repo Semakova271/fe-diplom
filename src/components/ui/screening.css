@@ -1,0 +1,25 @@
+section.screening {
+  margin-left: 86px;
+  width: 958px;
+}
+
+.screening-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.screening-block {
+  width: 959px;
+  margin-top: 95px;
+  margin-right: 257px;
+}
+
+/* Убрать дублирующиеся стили, которые уже в компонентных файлах */
+.screening_block-control {
+  width: 959px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}

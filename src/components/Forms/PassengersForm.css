@@ -1,0 +1,79 @@
+.passengers-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Заголовок "Пассажир X" */
+.passengers-form_header {
+  padding: 20px 20px 0;
+}
+
+.passenger-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.passenger-type {
+  font-size: 14px;
+  color: #666;
+}
+
+.passengers-form_divider {
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 0 20px;
+}
+
+/* Обертка для документа с сообщением об ошибке */
+.passengers-docs_wrapper {
+  position: relative;
+  min-height: 120px; /* Минимальная высота для размещения ошибки */
+}
+
+.passengers-form_control {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f9f9f9;
+  margin-top: 10px; /* Отступ для ошибки */
+}
+
+.next-passenger-btn {
+  background-color: #ffa800;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.next-passenger-btn:hover {
+  background-color: #e69700;
+}
+
+.next-passenger-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .passengers-form_control {
+    justify-content: center;
+  }
+  
+  .next-passenger-btn {
+    width: 100%;
+  }
+}

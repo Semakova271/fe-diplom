@@ -1,0 +1,422 @@
+/* Общие стили футера */
+.footer {
+  background-color: #2D2B2F;
+  color: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin-top: auto;
+  font-size: 24px;
+}
+
+/* Верхняя часть футера */
+.footer-top {
+  padding: 50px 0 40px 0;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-contacts {
+  padding-right: 60px;
+  width: 50%;
+}
+
+.footer-subscribe {
+  padding-left: 60px;
+  width: 50%;
+}
+
+/* Заголовки */
+.footer-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  margin: 0 0 25px 0;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/* Список контактов */
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: flex-start;
+  min-height: 30px;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.contact-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #E5E5E5;
+}
+
+/* Форма подписки */
+.subscribe-description {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 25px 0;
+  color: #E5E5E5;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.subscribe-input {
+  width: 447px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid #E5E5E5;
+  padding: 0 20px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subscribe-input::placeholder {
+  color: #E5E5E5;
+  opacity: 1;
+  text-transform: lowercase;
+}
+
+.subscribe-button {
+  width: 169px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  color: #E5E5E5;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  margin-left: 33px;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.subscribe-button:hover {
+  background: #FFCA62;
+  border-color: #FFCA62;
+  color: #2D2B2F;
+}
+
+.subscribe-button:active {
+  background: #FFFFFF;
+  color: #2D2B2F;
+  border-color: #FFFFFF;
+}
+
+/* Социальные иконки - Подписывайтесь на нас */
+.social-section {
+  margin-top: 35px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1); /* Делает SVG белым */
+}
+
+.social-icon:hover img {
+  filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(0deg); /* Оранжевый цвет */
+}
+
+/* Специальные стили для каждой иконки */
+.social-icon:nth-child(1) img { /* LinkedIn */
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:nth-child(2) img { 
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:nth-child(3) img { 
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:nth-child(4) img { 
+  width: 37px;
+  height: 30px;
+}
+
+.social-icon:nth-child(5) img { 
+  width: 37px;
+  height: 30px;
+}
+
+/* Нижняя часть футера */
+.footer-bottom {
+  padding: 0 80px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #E5E5E5;
+  width: 100%;
+  margin: 0;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  position: relative;
+}
+
+/* Лого */
+.logo-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: #E5E5E5;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Центральная секция с годом */
+.center-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.copyright {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #E5E5E5;
+  text-transform: uppercase;
+}
+
+/* Кнопка наверх */
+.scroll-top-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scroll-top {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #E5E5E5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-icon {
+  width: 14px;
+  height: 8px;
+  filter: brightness(0) invert(1); /* Делает SVG белым */
+}
+
+.scroll-top:hover {
+  border-color: #FFA800;
+}
+
+.scroll-top:hover .scroll-top-icon {
+  filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(0deg); /* Оранжевый цвет */
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .footer-container {
+    padding: 0 40px;
+  }
+  
+  .footer-bottom {
+    padding: 0 40px;
+  }
+  
+  .subscribe-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 30px;
+  }
+  
+  .footer-contacts,
+  .footer-subscribe {
+    padding: 0;
+    width: 100%;
+  }
+  
+  .footer-bottom {
+    padding: 0 30px;
+  }
+  
+  .bottom-container {
+    height: auto;
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+  }
+  
+  .logo-section,
+  .center-section,
+  .scroll-top-section {
+    flex: none;
+    justify-content: center;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  
+  .center-section {
+    position: static;
+    transform: none;
+  }
+  
+  .subscribe-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .subscribe-button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .contact-text,
+  .subscribe-description,
+  .subscribe-input,
+  .subscribe-button {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .subscribe-input,
+  .subscribe-button {
+    height: 50px;
+  }
+  
+  .subscribe-button {
+    width: 140px;
+  }
+  
+  .footer-logo {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  
+  .copyright {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    padding: 0 20px;
+  }
+  
+  .footer-bottom {
+    padding: 0 20px;
+  }
+  
+  .social-icons {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

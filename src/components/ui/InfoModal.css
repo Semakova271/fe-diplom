@@ -1,0 +1,126 @@
+/* InfoModal.css */
+.info-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  background: linear-gradient(135deg, #a191a1, #000000);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info-modal-wrapper.info-modal-active {
+  display: flex;
+  opacity: 0.9;
+}
+
+.info-modal {
+  position: relative;
+  z-index: 10001;
+  animation: info-modalFadeIn 0.3s ease;
+}
+
+@keyframes info-modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-modal-card {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  width: 666px;
+  height: 418px;
+  background: #ffffff; /* Белый фон */
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.info-modal__card-top {
+  width: 100%;
+  height: 107px;
+  background: rgba(255, 245, 0, 0.36);
+  border-bottom: 1px dashed #928f94;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.info-modal__card-top svg {
+  margin-left: 38px;
+  width: 32px;
+  height: 32px;
+}
+
+.info-modal__block-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  padding: 35px 24px 28px 47px;
+}
+
+/* Стили для текста */
+.info-modal__block-text .info-text:first-child {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.info-modal__card-body {
+  border-bottom: 1px dashed #928f94;
+  padding: 0;
+}
+
+.info-modal__card-bottom {
+  height: 105px;
+  display: flex;
+  justify-content: center; /* Центрируем кнопку */
+  align-items: center;
+  padding: 0;
+  background: #ffffff; /* Белый фон */
+}
+
+.info-modal__control {
+  width: 223px; /* 223px ширина */
+  height: 52px; /* 52px высота */
+  background: #fbfbfb;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Центрирование */
+}
+
+.info-modal__control:hover {
+  background: #ffca62;
+  border-color: #ffca62;
+}
+
+.info-modal__control:active {
+  background: #fff;
+  color: #ffa800;
+  border: 1px solid #ffa800;
+}
+

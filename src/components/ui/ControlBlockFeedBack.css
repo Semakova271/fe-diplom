@@ -1,0 +1,64 @@
+/* ControlBlockFeedBack.css */
+.control_block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.licker_wrap {
+  display: flex;
+  margin-left: 83px;
+  align-items: center;
+}
+
+.licker-block_title {
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Roboto";
+  font-style: normal;
+  color: #292929;
+}
+
+.licker-block_button-desk {
+  margin-left: 10px;
+}
+
+button.licker_btn {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.order-result_block-control {
+  margin-right: 89px;
+}
+
+button.reverse_to_homePage_btn {
+  width: 323px;
+  height: 60px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: 1px solid #3e3c41;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.reverse_to_homePage_btn:hover {
+  background-color: #3e3c41;
+  color: white;
+}
+
+/* Стили для карточек с результатом заказа */
+.card-bottom.order-result_bottom {
+  height: 161px;
+  background: rgba(255, 168, 0, 0.88);
+}

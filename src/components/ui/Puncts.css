@@ -1,0 +1,91 @@
+/* Puncts.css */
+section.order-result_puncts.section {
+  margin: auto;
+  height: 312px;
+  background: #f4f3f6;
+}
+
+.order-result_cards.card-desk {
+  width: 755px;
+  padding: 0;
+  margin: 40px auto;
+  border: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-result_block-item_card.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f3f6;
+  width: 205px;
+  border: 0px;
+}
+
+.card-top.order-result_cards-item.card {
+  background: inherit;
+  border: none;
+  border-radius: 0px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.card-body.order-result.cards-item {
+  display: flex;
+  justify-content: center;
+  margin: 11px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #292929;
+}
+
+/* Дополнительные общие стили */
+.order-result_title {
+  width: 879px;
+  height: 117px;
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 84px;
+  color: #ffffff;
+}
+
+.card-top.order-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 148px;
+  margin-left: 82px;
+  margin-right: 79px;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #3e3c41;
+}
+
+span.price_text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #928f94;
+}
+
+.order-result_price-currency {
+  margin-left: 5px;
+  margin-bottom: 6px;
+}
+
+.card-body.order-result {
+  padding: 0;
+}

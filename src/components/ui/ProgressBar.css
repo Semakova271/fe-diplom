@@ -1,0 +1,150 @@
+/* ProgressBar */
+.progress {
+  position: relative;
+  width: 1919px;
+  height: 98px;
+  background: #3e3c41;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+/* Основной контейнер для шагов */
+.progress-bar-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Общие стили для всех шагов */
+.progress-bar {
+  position: relative;
+  height: 100%;
+  background-color: #3e3c41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  clip-path: polygon(
+    0% 0px,
+    /* верхняя левая */ 0px 0%,
+    /* верхняя левая */ calc(100% - 47px) 0%,
+    /* верхняя правая */ 100% 47px,
+    /* верхняя правая */ 100% calc(100% - 47px),
+    /* нижняя правая */ calc(100% - 47px) 100%,
+    /* нижняя правая */ 0px 100%,
+    /* нижняя левая */ 0 calc(100% - 47px) /* нижняя левая */
+  );
+}
+
+/* Первый шаг - Билеты */
+.progress-bar.step-tickets {
+  position: absolute;
+  left: 0;
+  width: 621px;
+  background-color: #ffa800;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Второй шаг - Пассажиры */
+.progress-bar.step-passenger {
+  position: absolute;
+  left: 573px; /* 621px - 48px для перекрытия */
+  width: 435px;
+  background-color: #3e3c41;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 70px; /* Отступ для выравнивания номера */
+  z-index: 3;
+}
+
+/* Третий шаг - Оплата */
+.progress-bar.step-pay {
+  position: absolute;
+  left: 960px; /* 573px + 435px - 48px для перекрытия */
+  width: 435px;
+  background-color: #3e3c41;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 70px; /* Отступ для выравнивания номера */
+  z-index: 2;
+}
+
+/* Четвертый шаг - Проверка */
+.progress-bar.step-validate {
+  position: absolute;
+  left: 1345px; /* 960px + 435px - 48px для перекрытия */
+  width: 646px;
+  background-color: #3e3c41;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 70px; /* Отступ для выравнивания номера */
+  z-index: 1;
+}
+
+/* Активный шаг - оранжевый фон */
+.progress-bar.step_active {
+  background: #ffa800 !important;
+}
+
+/* Контент внутри шага */
+.progress-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Цифра в круге */
+span.numbering {
+  width: 53px;
+  height: 53px;
+  border-radius: 53px;
+  border: 3px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 24px;
+}
+
+/* Название шага */
+.progress-bar-name {
+  margin-left: 0;
+  white-space: nowrap;
+}
+
+/* Граничные стрелки (скрыты) */
+.border-top-step {
+  height: 148px;
+  border: 1px solid #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -2px;
+  display: none;
+}
+
+.border-bottom-step {
+  height: 148px;
+  border: 1px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -2px;
+  display: none;
+}
+
+/* Для шагов с justify-content: flex-start - выравнивание */
+.progress-bar.step-passenger .progress-bar-content,
+.progress-bar.step-pay .progress-bar-content,
+.progress-bar.step-validate .progress-bar-content {
+  margin-left: 0;
+}

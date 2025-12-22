@@ -1,0 +1,766 @@
+.selection-wagons_wrapper {
+  background-color: #e5e5e5;
+  display: flex;
+  min-height: 774px;
+  width: 1920px;
+}
+.selection-wagon-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.selection-wagon_Block {
+  flex-direction: column;
+  margin-top: 97px;
+  margin-left: 86px;
+  margin-right: 256px;
+  width: 959px;
+  font-family: "Roboto";
+  font-style: normal;
+}
+.selection-wagon_title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #292929;
+}
+.selection-wagon_details {
+  width: 959px;
+  margin-top: 48px;
+  background: #fff;
+}
+.selection-wagon_buttons-group {
+  padding: 36px 19px 32px 19px;
+}
+
+.selection-wagon.come-back_btn.btn.text-center {
+  padding: 0;
+  width: 76px;
+  height: 60px;
+  background: #ffa800;
+  border-radius: 5px;
+}
+
+.come-back-text_btn.btn.text-center {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  width: 325px;
+  height: 60px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/*Card*/
+.trains-block_icon-train.text-center {
+  width: 28px;
+  height: 28px;
+  margin-top: 30px;
+  border: 2px solid #ffa800;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.trains-block_card-top.card-top {
+  display: flex;
+  flex-direction: row;
+
+  padding-left: 35px;
+  width: 240px;
+  border-right: 1px solid #ffffff;
+}
+.trains-block_body-group.d-flex.flex-row {
+  justify-content: space-between;
+}
+.trains-block_card-top-svgIcon-wrap {
+  display: flex;
+  align-items: center;
+}
+.trains-number {
+  display: flex;
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #3e3c41;
+}
+.card-body.trains-block_body {
+  padding: 28px 41px 0px 36px;
+}
+.trains-block_card.card {
+  border-radius: 0;
+  border: none;
+  background: #f7f6f6;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-bottom.trains-block_bottom {
+  width: 237px;
+  border-left: 1px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.trains-block-svgIcon-wrap {
+  margin-left: 35px;
+}
+.trains-block-timing {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+}
+
+/*Quantity Tickets*/
+
+.quantity-tickets_block {
+  background: #ffffff;
+  padding-top: 40px;
+  height: 337px;
+  border-bottom: 1px dashed #c4c4c4;
+}
+
+.quantity-tickets_block_title,
+.wagons-type_title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: #292929;
+  margin-left: 19px;
+}
+
+.quantity-tickets_block-menu {
+  display: flex;
+
+  justify-content: space-between;
+}
+.quantity-tickets_block-menu-item {
+  position: relative;
+  padding-left: 36px;
+  padding-top: 20px;
+  padding-right: 41px;
+  width: 317px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.selected_type-tickets {
+  background: #f7f6f6;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+}
+
+.input-group-prepend.quantity-tickets_input-group {
+  position: relative;
+  height: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+  color: #292929;
+  padding-left: 15px;
+  align-items: center;
+  border: 1px solid #928f94;
+  border-radius: 5px;
+  background: #fff;
+}
+.quantity-tickets_input-group > .services_tooltip {
+  background: rgb(242, 208, 122);
+  position: absolute;
+  left: 0;
+  top: 70px;
+
+}
+.quantity-tickets_input-group > .services_tooltip:before {
+  content: "";
+  border: 20px solid transparent;
+  border-bottom-color: rgb(242, 208, 122);
+  position: absolute;
+  top: 4px;
+  margin: -43px 0px 0px 82px;
+}
+
+.quantity-tickets_input-group.error-quantity {
+  border: 1px solid red;
+}
+input#exampleInputTypeTickets {
+  width: 35px;
+  padding: 5px;
+  border: none;
+}
+
+label.quantity-tickets.adult_input-label,
+label.quantity-tickets.child_input-label {
+  margin-top: 23px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+label.quantity-tickets.child_input-label {
+  color: #928f94;
+}
+
+/*WagonsTypeBlock*/
+.wagons-type_block {
+  background: #fff;
+  padding-top: 27px;
+}
+
+.wagons-type_btn.btn.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wagons-type_buttons-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 35px;
+  margin-right: 119px;
+  margin-top: 20px;
+}
+
+.wagons-type_buttons-text {
+  margin-top: 18px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #918f94;
+}
+
+.available-seats-details_block-header {
+  display: flex;
+  height: 37px;
+  background: rgba(255, 168, 0, 0.44);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.available-seats-details_buttons-block
+  span.available-seats-details_buttons-block-label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+  color: #2d2b2f;
+  margin-left: 34px;
+}
+
+span.available-seats-details_buttons-block-legend {
+  margin-right: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 38px;
+  color: #292929;
+}
+
+.available-seats-details_block {
+  background: #fff;
+  padding-top: 29px;
+  padding-bottom: 32px;
+}
+.available-seats-details_buttons-block {
+  display: flex;
+}
+
+/*Карта вагона*/
+.wagon_item.wagon-first_class {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  margin-top: 69px;
+  margin-left: 20px;
+  background-image: url(../../../img/image_first_class_wagon.png);
+}
+.wagon_item.wagon-second_class {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  margin-top: 69px;
+  margin-left: 20px;
+
+  background-image: url(../../../img/image_second_class_wagon.svg);
+}
+.wagon_item.wagon-third_class {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  margin-top: 69px;
+  margin-left: 20px;
+
+  background-image: url(../../../img/image_third_class_wagon.svg);
+}
+.wagon_item.wagon-fourth_class {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  margin-top: 69px;
+  margin-left: 20px;
+
+  background-image: url(../../../img/image_fourth_class_wagon.svg);
+}
+
+.utils-wagon_wrap.wagon-third_class_wrap,
+.utils-wagon_wrap.wagon-fourth_class_wrap,
+.utils-wagon_wrap.wagon-first_class_wrap,
+.utils-wagon_wrap.wagon-second_class_wrap {
+  position: absolute;
+  top: 29px;
+  left: 134px;
+  display: flex;
+  flex-direction: row;
+  height: 108px;
+  width: 712px;
+}
+
+/*Плацкарт*/
+.utils-wagon_wrap.wagon-third_class_wrap {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.utils-wagon-second_class_sector {
+  display: flex;
+  height: 61px;
+  width: 100%;
+  justify-content: space-between;
+}
+.utils-wagon_buttons-block_box {
+  width: 25px;
+  height: 60px;
+}
+
+.utils-wagon_box {
+  width: 86px;
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+}
+.utils-wagon_buttons-block_box:nth-child(odd) {
+  margin-right: 31px;
+}
+.utils-wagon_button_box {
+  width: 25px;
+  height: 31px;
+
+  border: 1px solid #e5e5e5;
+}
+
+.utils-wagon_button_box,
+.utils-wagon_button_side {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 2px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.utils-wagon_buttons-block_side-box {
+  display: flex;
+  width: 86px;
+}
+
+.utils-wagon-second_class_sector.side-sector {
+  height: 23px;
+}
+
+button.utils-wagon_button_box.side-button_box {
+  height: 22px;
+  width: 49%;
+  line-height: 10px;
+}
+/*Сидячий*/
+.utils-wagon_wrap.wagon-fourth_class_wrap {
+  display: flex;
+  flex-direction: column;
+  height: 108px;
+  justify-content: space-between;
+}
+
+.utils-wagon-wagon-fourth_class_sector {
+  /*background-color: yellow;*/
+  display: flex;
+  /*opacity: 0.5;*/
+  height: 48px;
+  width: 712px;
+  flex-direction: column;
+  width: 100%;
+}
+.utils-wagon-wagon-fourth_class_sector-row {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+  width: 688px;
+  margin: 1px auto;
+}
+.utils-wagon-wagon-fourth_class_sector-row.short-row {
+  width: 600px;
+}
+button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
+  height: 22px;
+  width: 29px;
+}
+
+/*Люкс*/
+.utils-wagon-wagon-first_class_sector {
+  display: flex;
+
+  height: 58px;
+  width: 712px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.utils-wagon-wagon-first_class_sector-row {
+  display: flex;
+  height: 70px;
+
+  justify-content: space-between;
+}
+.utils-wagon_buttons-block_box.first_class-buttons-block_box {
+  width: 86px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0;
+}
+button.utils-wagon_button_box.wagon-first_class_seat-btn {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+/*Купе*/
+
+.utils-wagon-wagon-second_class_sector {
+  width: 100%;
+  height: 58px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.utils-wagon_buttons-block_box.second_class-buttons-block_box:nth-child(odd) {
+  margin-right: 31px;
+}
+.occupied_seat {
+  background: #959393;
+  color: #fff;
+  cursor: not-allowed;
+}
+.utils-wagon_button_selected {
+  border: 2px solid #ffa800;
+}
+.number-wagons_btn.btn.text-center {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #2d2b2f;
+}
+
+.number-wagons_btn.btn.text-center {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  margin-left: 8px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #2d2b2f;
+}
+
+.available-seats-details_wagon-number-text {
+  width: 190px;
+  height: 161px;
+  display: flex;
+  align-items: center;
+  background: #ffd98f;
+
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  color: #292929;
+  justify-content: center;
+}
+
+.available-seats-details_wagon-number {
+  height: 161px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  background: #ffd98f;
+
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  color: #292929;
+  justify-content: center;
+  flex-direction: column;
+}
+
+span.available-seats-details_wagon-number-text {
+  font-weight: 400;
+  font-size: 24px;
+  height: 15px;
+}
+
+.available-seats-details_wagon-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.available-seats-details_wagon-seats-details_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 769px;
+  padding: 33px 59px 0px 85px;
+}
+
+th.amount-seats_table-title,
+.services-block_title_normal,
+.services-block_title_light {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #928f94;
+}
+
+tr.amount-seats_table-item {
+  height: 47px;
+}
+.amount-seats_round-num {
+  margin-left: 8px;
+  color: #000000;
+}
+
+.amount-seats_details {
+  width: 100px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.amount-seats_details-num,
+.amount-seats_details-price {
+  width: 150px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.amount-seats_details-price-currency {
+  margin-left: 8px;
+  margin-bottom: 5px;
+}
+
+.services-block_title_light {
+  color: #c4c4c4;
+  margin-left: 6px;
+}
+.services-block_title_light {
+  color: #c4c4c4;
+  margin-left: 11px;
+}
+
+.btn-desk.services-buttons {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  width: 182px;
+  justify-content: space-between;
+}
+
+.btn.wagon-services_btn {
+  display: flex;
+  justify-content: center;
+  width: 36px;
+  height: 34px;
+  padding: 5px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+}
+.btn.wagon-services_btn.included {
+  background: rgba(255, 168, 0, 0.79);
+  border-color: rgba(255, 168, 0, 0.79);
+}
+.btn.wagon-services_btn:hover:enabled {
+  background: #ffa800;
+}
+.wagon-services_btn.selected {
+  /**/
+  background: rgba(255, 168, 0, 0.79);
+  border-color: #ffa800;
+}
+/*.conditioning {
+  background-image: url(../../../img/selectionWagon/icon_conditioning.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}*/
+
+.selection-wagon-content_control {
+  display: flex;
+  justify-content: flex-end;
+}
+.next-block_btn.btn.text-center {
+  margin-top: 102px;
+  margin-bottom: 122px;
+  width: 222px;
+  height: 60px;
+  background: #ffa800;
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+button.next-block_btn.btn.text-center:disabled {
+  background: #928f94;
+}
+
+.available-seats-details_block-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  padding-top: 25px;
+  height: 53px;
+}
+
+.available-seats-details_block-bottom_text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffa800;
+}
+.available-seats-details_currency-icon {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 38px;
+}
+
+.btn.wagon-services_btn.conditioning_selected {
+  background-image: url(../../../img/selectionWagon/icon_conditioning_white.svg);
+  background: #ffa800;
+  border-color: #ffa800;
+}
+.services-button_wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.services_tooltip {
+  position: absolute;
+  visibility: hidden;
+  top: 40px;
+  background: #e5e5e5;
+  border-radius: 5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-align: center;
+}
+
+.services_tooltip.tooltip_quantity-tickets {
+  top: 80px;
+  background: none;
+  text-align: start;
+}
+
+span.tooltip_text.text_quantity-tickets {
+  font-size: 12px;
+  color: red;
+}
+.tooltip_conditioning {
+  width: 130px;
+  height: 31.31px;
+  top: 40px;
+  left: -30px;
+}
+.tooltip_wifi {
+  width: 84px;
+  height: 31.31px;
+
+  left: -22px;
+}
+.tooltip_wifi {
+  width: 84px;
+  height: 31.31px;
+  left: -22px;
+}
+
+.tooltip_linens {
+  width: 84px;
+  height: 31.31px;
+  right: -20px;
+}
+
+.tooltip_coffee {
+  width: 84px;
+  height: 31.31px;
+  top: 40px;
+  left: -22px;
+}
+.tooltip_text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #292929;
+}
+
+.wagon_template-block {
+  position: absolute;
+  width: 199px;
+  height: 72px;
+  top: -70px;
+  right: 42px;
+  background: #f3f3f3;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+span.template-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #292929;
+}

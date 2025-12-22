@@ -1,0 +1,178 @@
+/* LastTicket.css */
+.last-tickets-block {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-dark-charcoal-3_19);
+  width: 100%;
+  max-width: 360px;
+}
+
+.last-tickets {
+  font-size: 1.875rem;
+  line-height: calc(7/6);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 1.875rem;
+  text-align: left;
+}
+
+.last-tickets-menu-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.last-tickets-menu-item {
+  padding: 16px 20px 6px 16px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-silver);
+  box-shadow: 0 2px 2px 0 rgba(62, 60, 65, 0.25);
+  border-radius: var(--radius-5);
+  margin-bottom: 0;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.last-tickets-menu-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px 0 rgba(62, 60, 65, 0.3);
+}
+
+.last-tickets__card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex: 1;
+}
+
+.last-tickets_train-departure-from {
+  flex: 1;
+  min-width: 0;
+}
+
+.last-tickets_train-departure-from:first-child {
+  text-align: left;
+}
+
+.last-tickets_train-departure-from:last-child {
+  text-align: right;
+}
+
+.last-tickets_train-departure,
+.last-tickets_train-departure-to {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--color-dark-charcoal-3_19);
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.data-trains-city-name {
+  display: block;
+  font-weight: 500;
+  color: #000000;
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+.data-trains-railway_station_name {
+  font-size: 1rem;
+  line-height: 1.19;
+  font-weight: 400;
+  color: var(--color-taupe-gray-3_62);
+  white-space: normal;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-platinum);
+}
+
+.last-tickets__card-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--color-taupe-gray-3_62);
+}
+
+.text-min-price {
+  font-size: 1rem;
+  line-height: 1.19;
+  font-weight: 400;
+  color: var(--color-taupe-gray-3_62);
+}
+
+.last-tickets__card_min-price {
+  font-size: 2.25rem;
+  line-height: calc(7/6);
+  font-weight: 700;
+  color: var(--color-chrome-yellow);
+}
+
+.last-tickets__card_bottom-icon.currency-icon {
+  width: 20px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2225%22%20viewBox%3D%220%200%2020%2025%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5.00056%2015.0063C5.00056%2015.8463%205.00056%2016.6697%205.00056%2017.5031C7.08079%2017.5031%209.15436%2017.5031%2011.2379%2017.5031C11.2379%2018.3398%2011.2379%2019.1665%2011.2379%2020.0065C9.16103%2020.0065%207.08413%2020.0065%205.00056%2020.0065C5.00056%2021.6765%205.00056%2023.3333%205.00056%2025C4.1638%2025%203.33704%2025%202.49695%2025C2.49695%2023.3399%202.49695%2021.6799%202.49695%2020.0132C1.66019%2020.0132%200.83676%2020.0132%200.00333371%2020.0132C0.00333371%2019.1765%200.00333371%2018.3498%200.00333371%2017.5097C0.830093%2017.5097%201.65685%2017.5097%202.48694%2017.5097C2.48694%2016.673%202.48694%2015.8497%202.48694%2015.013C1.66019%2015.013%200.833427%2015.013%200%2015.013C0%2014.1729%200%2013.3462%200%2012.5096C0.826759%2012.5096%201.65352%2012.5096%202.49028%2012.5096C2.49028%208.3394%202.49028%204.17925%202.49028%200.0124341C2.54028%200.00910067%202.57362%200.00576722%202.61029%200.00576722C5.944%200.00576722%209.2777%20-0.0109%2012.6114%200.0124341C14.535%200.0257679%2016.2085%200.729127%2017.6153%202.04251C18.7954%203.14255%2019.5555%204.48926%2019.8556%206.07599C20.2723%208.28607%2019.7855%2010.3028%2018.4187%2012.0895C17.482%2013.3162%2016.2585%2014.1629%2014.7917%2014.6463C14.0749%2014.883%2013.3382%2015.0063%2012.5847%2015.0063C10.1078%2015.0096%207.63419%2015.0063%205.15724%2015.0096C5.10724%2015.0063%205.05723%2015.0063%205.00056%2015.0063ZM5.00389%202.50586C5.00389%205.84931%205.00389%209.1761%205.00389%2012.5062C5.04056%2012.5062%205.07057%2012.5062%205.10057%2012.5062C7.60085%2012.5062%2010.1011%2012.5129%2012.6014%2012.4995C12.9881%2012.4962%2013.3848%2012.4395%2013.7582%2012.3429C16.4018%2011.6429%2017.972%209.04276%2017.3719%206.386C16.8586%204.11925%2014.8383%202.50586%2012.5114%202.50586C10.0611%202.50586%207.61085%202.50586%205.16058%202.50586C5.11057%202.50586%205.06057%202.50586%205.00389%202.50586Z%22%20fill%3D%22%23928F94%22%2F%3E%3C%2Fsvg%3E');
+}
+
+.fa-rub {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Стили для иконок */
+.trains-menu_icons-block {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Сообщение когда нет данных */
+.no-tickets,
+.loading-state,
+.error-state {
+  padding: 20px;
+  text-align: center;
+  color: var(--color-taupe-gray-3_62);
+  font-size: 1rem;
+  border: 1px dashed var(--color-silver);
+  border-radius: var(--radius-5);
+  margin-top: 10px;
+}
+
+.error-state {
+  border-color: var(--color-coquelicot);
+  color: var(--color-coquelicot);
+}
+
+.retry-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--color-chrome-yellow);
+  color: #000;
+  border: none;
+  border-radius: var(--radius-5);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.retry-button:hover {
+  background-color: var(--color-maximum-yellow-red);
+}

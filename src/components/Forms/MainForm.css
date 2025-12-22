@@ -1,0 +1,78 @@
+/* Контейнер основной формы */
+.main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Секция направления */
+.main-form_destination {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.group-city-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.form_reverse-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.form_reverse-button:hover {
+  background-color: #f0f0f0;
+}
+
+.ic_arrow_form {
+  width: 24px;
+  height: 24px;
+  transform: rotate(90deg);
+}
+
+/* Секция дат */
+.main-form_date-trails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.group-date-trails {
+  display: flex;
+  gap: 20px;
+}
+
+/* Секция управления */
+.main-form_control {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .main-form {
+    gap: 20px;
+  }
+  
+  .group-date-trails {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main-form_control {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,110 @@
+.services_tooltip {
+  position: absolute;
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  line-height: calc(18/16);
+  border-radius: 5px;
+  background-color: #292929;
+  color: #f5f4f6;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  pointer-events: none;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip_text {
+  position: relative;
+  z-index: 10;
+}
+
+/* Стрелка tooltip (внизу) */
+.services_tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 6px solid #292929;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: none;
+}
+
+/* Показать tooltip при hover на элементе с data-tooltip-id */
+[data-tooltip-id]:hover ~ .services_tooltip,
+[data-tooltip-id]:focus ~ .services_tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Или при hover на родительском элементе */
+.parent-container:hover .services_tooltip,
+.parent-container:focus-within .services_tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Специфичные стили для разных позиций */
+.services_tooltip.tooltip_top {
+  bottom: auto;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+}
+
+.services_tooltip.tooltip_top::before {
+  top: auto;
+  bottom: 100%;
+  border-top: none;
+  border-bottom: 6px solid #292929;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.services_tooltip.tooltip_left {
+  bottom: auto;
+  top: 50%;
+  left: auto;
+  right: calc(100% + 8px);
+  transform: translateY(-50%);
+}
+
+.services_tooltip.tooltip_left::before {
+  top: 50%;
+  left: auto;
+  right: -12px;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #292929;
+  border-right: none;
+}
+
+.services_tooltip.tooltip_right {
+  bottom: auto;
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translateY(-50%);
+}
+
+.services_tooltip.tooltip_right::before {
+  top: 50%;
+  left: -12px;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #292929;
+  border-left: none;
+}

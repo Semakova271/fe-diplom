@@ -1,0 +1,58 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.form-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1920px;
+  z-index: 10;
+}
+
+/* Сохраняем исходные размеры и позицию формы */
+.homepage_form {
+  position: absolute;
+  width: 729px;
+  height: 574px;
+  right: 232px; /* Было margin-left: 959px, теперь используем right */
+  bottom: 20px; /* Отступ от нижнего края баннера */
+  background: rgba(41, 41, 41, 0.8);
+  padding-left: 21px;
+  padding-right: 24.25px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .homepage_form {
+    right: 100px;
+    width: 650px;
+  }
+}
+
+@media (max-width: 992px) {
+  .homepage_form {
+    right: 50px;
+    width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage_form {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(-50px);
+  }
+  
+  .form-overlay {
+    position: relative;
+    transform: none;
+    left: auto;
+  }
+}

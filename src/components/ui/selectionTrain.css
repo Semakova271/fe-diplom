@@ -1,0 +1,386 @@
+/* selectionTrain.css - Только общие стили страницы */
+
+.main-content__wrap {
+  position: relative;
+  margin-top: 158px;
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-train_wrapper {
+  background-color: #e5e5e5;
+  display: flex;
+  min-height: 774px;
+  width: 1920px;
+}
+
+.selection-train_content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section#trains-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 86px;
+  width: 959px;
+}
+
+/* Form */
+.search-tickets_form {
+  position: absolute;
+  left: 215px;
+  top: 111px;
+  width: 1490px;
+  height: 327px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(41, 41, 41, 0.69);
+}
+
+.search-tickets_form_departure_title {
+  width: 50%;
+  margin-top: 28px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.search-tickets_form_destination {
+  width: 50%;
+  padding-left: 44px;
+  padding-right: 18px;
+}
+
+.search-tickets_form_date-trails {
+  width: 50%;
+  padding-right: 42px;
+  padding-left: 18px;
+}
+
+.search-tickets_form_departure_title:last-child {
+  margin-left: -7px;
+}
+
+.search-tickets_form_control {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 41px;
+  margin-top: 30px;
+}
+
+/* Trains cards layout */
+.trains-menu-wrap.d-flex {
+  margin-top: 26px;
+  margin-right: 256px;
+  flex-direction: column;
+}
+
+.card-deck.trains-menu-group {
+  display: flex;
+  flex-direction: column;
+  max-width: 959px;
+}
+
+.trains-menu-item_card.card {
+  display: flex;
+  flex-direction: row;
+  width: 959px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+.card-top.trains-menu-item {
+  display: flex;
+  flex-direction: column;
+  width: 197px;
+  background-color: #e4e0e9;
+}
+
+.trains-menu-svgIcon-wrap {
+  margin-top: 58px;
+  margin-left: 43px;
+}
+
+.trail {
+  margin-top: 17px;
+  margin-bottom: 31px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #292929;
+}
+
+.trains-menu.trains-number {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  width: 93px;
+  margin-left: 39px;
+  color: #3e3c41;
+}
+
+span.trail-city-name {
+  margin-left: 25px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #292929;
+}
+
+i.fa.fa-long-arrow-right {
+  margin-left: 5px;
+  color: #292929;
+}
+
+.train-name {
+  margin-left: 25px;
+}
+
+.card-body.trains-menu-item {
+  width: 479px;
+  padding: 54px 36px 23px 39px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+.trains-menu-group {
+  justify-content: space-between;
+}
+
+.trains-menu.train-departure-from {
+  width: 155px;
+}
+
+.trains-menu.train-departure-to {
+  width: 164px;
+}
+
+.train-departure.data-trains-railway_station_name {
+  color: #928f94;
+}
+
+.trains-menu-reverse-group {
+  margin-top: 46px;
+  justify-content: space-between;
+}
+
+.train-departure.data-trains-datetime {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.trails-duration {
+  font-size: 18px;
+  line-height: 21px;
+  color: #c4c4c4;
+}
+
+.trails-duration-block > .trains-menu-svgIcon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+img.trains-menu-reverse__icon {
+  transform: rotate(180deg);
+  margin-left: 0;
+}
+
+/* Нижняя часть карточки - стили для контейнера */
+.card-bottom.trains-menu_bottom {
+  width: 283px;
+  border-left: 1px dashed #e5e5e5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Контейнер для вагонов - только структурные стили */
+.trains-menu-available-wagons {
+  width: 100%;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Иконки в карточке */
+.trains-menu_icons-block {
+  color: #c4c4c4;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 28px;
+  padding: 15px 0;
+  border-top: 1px dashed #e5e5e5;
+}
+
+.icon_rocket.card-icon_rocket.ml-2 {
+  width: 20px;
+  height: 18px;
+  filter: grayscale(2%);
+  opacity: 0.2;
+}
+
+/* Кнопка внизу карточки (главная кнопка) */
+.trains-menu_control {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px dashed #e5e5e5;
+}
+
+button.selection-seats_btn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  width: 228px;
+  height: 50px;
+  background: #ffa800;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.selection-seats_btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ff9624;
+}
+
+button.selection-seats_btn:active {
+  box-shadow: none;
+  background: #e5e5e5;
+  color: #ffa800;
+  border: 2px solid #ffa800;
+}
+
+/* Пагинация */
+.selection-trains-pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  margin-bottom: 193px;
+  list-style-type: none;
+}
+
+li.trains-menu-pagination__item {
+  height: 75px;
+  width: 85px;
+  margin-left: 35px;
+}
+
+.trains-menu-pagination__item-link,
+.trains-menu-pagination__next-item-link,
+.trains-menu-pagination__previus-item-link {
+  width: 83px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #928f94;
+  border: 2px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+li.trains-menu-pagination__item:nth-child(2) > a {
+  background: #ffa800;
+  color: #fff;
+}
+
+.trains-menu-pagination__next-item-link {
+  background-image: url(../../../img/selectionTrain/icon_paginate_arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.trains-menu-pagination__previus-item-link {
+  background-image: url(../../../img/selectionTrain/icon_paginate_arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+.trains-menu-pagination__item-link:focus {
+  background: #fff;
+  outline: none;
+  box-shadow: none;
+  border: 2px solid #ffa800;
+}
+
+.trains-menu-pagination__item-link:hover {
+  background: inherit;
+  color: #ffa800;
+  border: 2px solid #ffa800;
+}
+
+.trains-menu-pagination_active-link > a {
+  background: #fff;
+  border-color: #ffa800;
+  color: #ffa800;
+}
+
+.search-wrap-util {
+  height: 100%;
+  width: 79%;
+  display: flex;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .selection-train_wrapper {
+    width: 100%;
+  }
+  
+  .trains-menu-item_card.card {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .card-top.trains-menu-item,
+  .card-body.trains-menu-item,
+  .card-bottom.trains-menu_bottom {
+    width: 100%;
+  }
+  
+  .card-bottom.trains-menu_bottom {
+    border-left: none;
+    border-top: 1px dashed #e5e5e5;
+  }
+  
+  section#trains-menu {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+}

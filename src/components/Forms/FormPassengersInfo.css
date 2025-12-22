@@ -1,0 +1,104 @@
+.passengers-data_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Тип пассажира */
+.passengers-data_type {
+  margin-bottom: 10px;
+}
+
+/* Полные имена */
+.passengers-data_fullname {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.group-fullname {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.passengers-data_fullname_label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Пол и дата рождения */
+.passengers-data_gender_&_birthdate {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.group-gender,
+.group-birthdate {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.passengers-data_gender_label,
+.passengers-data_birthdate_label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Кнопки пола */
+.btn-gender {
+  padding: 8px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-gender:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.btn-gender:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.gender-active {
+  background-color: #ffa800;
+  color: white;
+  border-color: #ffa800;
+}
+
+/* Ограниченная подвижность */
+.passengers-data_disabled-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.passengers-data_disabled-person_text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .passengers-data_fullname,
+  .passengers-data_gender_&_birthdate {
+    grid-template-columns: 1fr;
+  }
+  
+  .passengers-data_form {
+    padding: 15px;
+  }
+}

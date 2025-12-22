@@ -1,0 +1,19 @@
+.form-sidebar-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-sidebar-block_departure,
+.form-sidebar-block_arrival {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Если нужно, добавьте медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .form-sidebar-block {
+    gap: 15px;
+  }
+}
